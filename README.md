@@ -3,7 +3,7 @@ Parallel Spin Orbit configuration Interaction (PSOCI) program.
 PSOCI is a computationally intensive method that uses MPI and Global Arrays to manage 
 largescale (parallel) data distribution and concurrancy. The enormous complexity limits 
 the application of PSOCI to only the largest of computer systems. PSOCI has reportedly scaled well
->50k nodes. It requires massive (aggregate) memory, large parallel disk space. It is somewhat related 
+50-100k nodes. It requires massive (aggregate) memory, large parallel disk space. It is somewhat related 
 to the Columbus Suite of computational codes in that many iof the same shared libraries and data structures are used
 and interchangable.
 
