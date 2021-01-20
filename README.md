@@ -14,4 +14,4 @@ The single excitations provide reasonable energy values for spin-orbit fine spli
 The code is useful in detailed theoretical analysis of complex bonding situations such as encountered 
 in Heavy Transition metal, Lanthanide or Actinide containing molecules.
 
-This code is difficult for the non expert implement given, the need for manually setup.
+This code is intended for the Quantum chemistry expert.
