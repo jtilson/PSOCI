@@ -1,0 +1,180 @@
+This is a list of the basic compiler options for PSOCI. Inside the code itself are many additional options for different H construction selections. THose are mostly for historical 
+purposes and to illustrate usage of rmany of the method
+
+-DNEWORBMAP
+
+Used to replicate the orbital maps onto all cores. This is of size (nbf+2)*nconfigurations
+Zeros are removed. Data are stored as shorts. Not including this increases H computation time by about 3x.
+
+-DDIRECT
+
+Used to select H and CI density construction algorithms that construct determinant information
+on-the-fly given the pair of configurations.  Generally speaking this is faster than the alternative
+which precomputes the determinant information and uses GA to fetch data as needed.
+
+
+-DGETANDBRDCST
+
+Use to specify algorithm used by the matrixVector product methods. In this case, 
+rank==0 fetches the current g_v vector CHUNK and brdcsts that data to remaining cores.
+Since BRDCST tends to be much faster than a DGOP/Allreduce  if a single GA::get is fast
+THen this method will be best. This is the prefered method for TACC's lonestar.
+
+Use the associated test program (gatest.C) to test platforms.
+
+The alternative approach is for each to fetch its local piece of the requested chunk 
+(effectively no "get" time) followed by a GA::dgop or MPI Allreduce ( see -DUSEMPI)
+This seems to be better on machines with a very slow GA::get like Hopper.
+
+-DUSEMPI
+
+If selected and if you are building with GA v5.1+ then the preceeding GA::dgop is
+replaced with an expliciti MPI Allreduce call. This approach is 2x faster n the RENCI 
+Blueridge cluster
+
+
+-DMODIFIED_EXPAND
+
+This approach forces the diagonalization subspace contraction to NOT recompute matric-vector produts.
+Rather, they are simply transformed n a manner similar to the vector themselves.
+
+-DSUPPLEMENTAL
+
+This selection enables using the two-stage storage model of GA for CIMAT, ICICOL and number.
+
+-DSINGLENODECONFIGS
+
+This selection performs a read of the input configuration list that doesn't require fitting 
+the entire list in memory. It is a little slower 
+
+-DORBMAPCIDENSITY 
+
+ Deprecated. Does nothing
+
+-DCLUSTER
+
+ Deprecated. Does nothing
+
+-DINTEL
+
+ Deprecated. Does nothing
+
+-DGOTGA
+
+ Deprecated. Does nothing
+
+-DCPPstyle
+
+ This initially wa sinplace to allow alternatives to the IO layer. It has been deprecated.
+
+
+Math libraries
+This is a very crude approach but sets the stage for a better overall deployment strategy
+Need to choose.
+-DMKL
+-DGOTO
+-DACML
+
+
+CI vector output format
+You must choose one of the following:
+
+-DBINARY
+-DASCII
+
+The output of the CI vector can be in either ASCII or BINARY forms. Binary is of course more compact.
+ 
+
+TIMING selections:
+
+-DGATIME:  uses GA's Wait
+-DMPITIME: uses MPIs timer
+else it uses Linux gtod_double
+
+-DDIAGGOP
+
+This impact the subspace (local) diagonalization step. Turning this on 
+uses GA::gop to assemble data for a final (dsygvPsoci call by everyone.
+
+Not choising this uses GA::gets and ::puts to assemble data for diagonalization.
+
+-DNEWRNOMRS
+
+This is important: In this selection, only the rnorm for the current vector is constructed.
+For example, if the first three vectors are "converged" for a particular tolerance setting, 
+then the rnorms for those three are NEVER rechecked. At the next tolerance setting they 
+of course get rechecked. Also at the very end the full set of rnorms are recalculated
+as a confirmation. THis saves a lot of time in the optimization BUT could result
+in a final vector that is not converged ( though the degree of non convergence is 
+reported
+
+Not selecting this always checks all preceeding rnorms for all vectors for every 
+subspace iteration. 
+
+Note: This approach of course, gets tripped up by the fact that low lying vectors may not
+be discovered  until late in the optimization. Our experience has been, that
+using the hierarchical rnorm tolerance approach, the basic vectors are identified
+by the end of the first tolerance. The second pass then simply improves them
+
+
+-DINCREMENTAL
+
+Another important selection. Choosing this results in subspaces being incrementally build
+for every new vector(s).A data parallel+gop algorithm is used.
+
+Not choosing this results in the FULL subspace also being rebuild using GA matmulPatch operators.THis turns out to be pretty slow
+
+-DNEWORTHOALL ( NEED TO RENAME ME )
+
+Another important selection. In this case, when a vector(s) is added to the subspace it
+is orthonormalized. The original vectors are not touched. This saves a huge amount of
+time but at the expense of possibly building up slop into the system.
+
+Not selecting this orthonormalizes all vectors for every subspace iteration ( including
+matrix-vector product calculations ).
+
+-DNEWORTHO ( Depends on -DNEWORTHOALL )
+
+If -DNEWORTHOALL is selected, two update algorithms are possible.
+
+Choosing -DNEWORTHO 
+
+Then a data-parallel aproach is selected that uses local GA::gets, performs
+local upodats than a final GA::gop and put call.
+
+If not, then a data-parallel update using GA patch calls is used. this can be slow
+
+-DNEWGETAPPEND
+
+
+This method impacts how Vector norms are computed.
+Selecting this enables a data-parallal vector norm that uses local GA::gets and
+a final gop.
+
+Not choosing this uses GA patch calls to get norms. These patch calls can be slow.
+
+-DNEWACCUMULATEDSCATTER
+
+This enables an alternative matrixVector procedure that uses more memory per core
+but uses scatter one time per vector 
+
+
+Suggestion
+
+For TACC compile the code as follows:
+
+-DDIRECT -DNEWORBMAP -DMODIFIED_EXPAND -DSUPPLEMENTAL -DSINGLENODECONFIGS  -DORBMAPCIDENSITY -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DMKL -DGATIME
+
+For TACC and really big calculations  compile the code as follows:
+
+-DDIRECT -DMODIFIED_EXPAND -DSUPPLEMENTAL -DSINGLENODECONFIGS  -DORBMAPCIDENSITY -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DMKL -DGATIME
+
+
+Oct 9, 2012
+
+Blueridge: Seems to run the scatter methods best with the following:
+CPPFLAGS = -DGETANDBRDCST -DSTAGGERCHUNKLIST -DINNERSCATTER -DNEWACCUMULATEDSCATTER -DNEWORBMAP -DMODIFIED_EXPAND -DSUPPLEMENTAL -DSINGLENODECONFIGS -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DMKL -DCPPstyle -DGATIME
+
+
+
+

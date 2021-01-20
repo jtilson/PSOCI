@@ -1,0 +1,37 @@
+
+# Using the old version of GA on Cori
+
+ 1002  cc -I /opt/cray/pe/ga/5.3.0.10/CRAY/86/include testmultrect.c -L/opt/cray/pe/ga/5.3.0.10/CRAY/86/lib -lsci_gnu -lga -lghostpeigs -larmci -lm -lpthread
+ 1003  srun ./a.out
+ 1004* ls libghostpeigs.so.mpich31*
+
+MAX_OUTSTANDING_NB = 1024
+OFFLOAD_THRESHOLD = 2048
+PUT_RELAXED_ORDERING = 2
+GET_RELAXED_ORDERING = 2
+MAX_CONCURRENCY = 1
+PI_ORDERING = 2
+Cray GA Initial System Setup Details
+gethugepagesize()                =2097152
+hugetlb_default_page_size        =0
+_SC_PAGESIZE                     =4096
+comex_page_size                  =2097152
+comex_hbw_page_size              =0
+malloc_is_using_huge_pages(0)    =0
+comex_is_using_huge_pages(1)     =1
+comex_is_using_hbw_huge_pages(2) =0
+comex hugepage type used         =1
+DMAPP put threshold              =2048
+DMAPP get threshold              =128
+XPMEM use is ENABLED
+Optimized CPU memcpy is ENABLED
+Optimized CPU memcpy level =0
+COMEX_USE_REM_ACC is ENABLED
+
+# Use new version of GA
+#
+/usr/common/software/ga/5.7/cray/9.0.0/hsw/lib
+
+cc -I /usr/common/software/ga/5.7/cray/9.0.0/hsw/include testmultrect.c -L/usr/common/software/ga/5.7/cray/9.0.0/hsw/lib -lsci_gnu -lcomex -lga -larmci -lm -lpthread
+tilson@nid00035:~/psociRestart-Cori/GAtesting> srun ./a.out
+

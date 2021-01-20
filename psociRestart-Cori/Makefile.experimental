@@ -1,0 +1,145 @@
+# PATH="/global/homes/t/tilson/perl5/bin:/opt/cray/rca/2.2.20-7.0.0.1_4.42__g8e3fb5b.ari/bin:/opt/cray/alps/6.6.50-7.0.0.1_3.44__g962f7108.ari/sbin:/opt/cray/alps/default/bin:/opt/cray/job/2.2.4-7.0.0.1_3.36__g36b56f4.ari/bin:/opt/cray/pe/craype/2.5.18/bin:/opt/gcc/8.2.0/bin:/global/common/cori_cle7/software/darshan/3.1.7/bin:/global/common/cori/software/altd/2.0/bin:/usr/common/software/bin:/usr/common/mss/bin:/usr/common/nsg/bin:/opt/cray/pe/mpt/7.7.6/gni/bin:/opt/ovis/bin:/opt/ovis/sbin:/usr/syscom/nsg/sbin:/usr/syscom/nsg/bin:/opt/cray/pe/modules/3.2.11.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/cray/pe/bin:/sbin" ldconfig -n /global/homes/t/tilson/GA52-CRAY-CORI/ga/BUILD/lib
+#BLASLIBRARY -lsci_gnu
+#LAPACKLIBRARY -lsci_gnu
+#MACHINEID CORI
+#MPI_MAINDIR /opt/cray/pe/mpt/7.7.6/gni/mpich-GNU/82
+#COLUMBUS /global/homes/t/tilson/Columbus.5.9.2.gnu.32bit/Columbus
+
+# Example from, NWCHEM literature:
+# http://www.nwchem-sw.org/index.php/Compiling_NWChem#Aries.2C_e.g._XC30.2FXC40
+
+#module load craype-hugepages64M
+#export CC=cc
+#export ARMCI_NETWORK=DMAPP
+#export ARMCI_NETWORK=MPI-PR
+##export DMAPP_INCLUDE=$CRAY_DMAPP_INCLUDE_OPTS
+##export DMAPP_LIB=$CRAY_DMAPP_POST_LINK_OPTS
+#export SCALAPACK="-L$MKLROOT/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential \\
+#-lmkl_blacs_intelmpi_ilp64 -lpthread -lm"
+#export BLASOPT="-L$MKLROOT/lib/intel64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential -lmkl_core -liomp5 -lpthread -ldmapp -lm"
+#export BLAS_SIZE=4
+#export SCALAPACK_SIZE=4
+#export SCALAPACK_LIB="$SCALAPACK"
+#export ARMCI_NETWORK=MPI-PR
+
+MPIINCLUDE=/opt/cray/pe/mpt/7.7.6/gni/mpich-gnu/8.2/include
+GAINCLUDE=-I/global/homes/t/tilson/GA-GITHUB/ga-5.6.5/BUILD/include 
+GALIB=-L/global/homes/t/tilson/GA-GITHUB/ga-5.6.5/BUILD/lib -lga++ -lga -larmci -lm -lhugetlbfs 
+
+#####NEW GAINCLUDE=-I/global/homes/t/tilson/GA54-GNU/ga-5-4/BUILD/include
+#####NEW GALIB=-L/global/homes/t/tilson/GA54-GNU/ga-5-4/BUILD/lib -lga++ -lcomex -lga -larmci -lm -lhugetlbfs -lgfortran -lm -lquadmath
+
+##################################################################
+# PNNL RECOMMENDS THE DMAPP VERSION FOR HOPPER ( aka exp1 )
+# MOREOVER do not load crayhugepages. Simply link to them
+
+#int32
+COLUMBUSDIR=/global/homes/t/tilson/Columbus.5.9.2.gnu.32bit/Columbus
+#ORIGCOLUMBUSLIBS=$(COLUMBUSDIR)/colib.a $(COLUMBUSDIR)/blaswrapper.a -lsci_gnu 
+COLUMBUSLIBS=$(COLUMBUSDIR)/colib.a $(COLUMBUSDIR)/blaswrapper.a -lsci_gnu
+
+#COLUMBUSLIBS=$(COLUMBUSDIR)/colib.a $(COLUMBUSDIR)/blaswrapper.a  -lifport -lifcore -limf -lsvml
+F77FLAGS = -c -w -xW -i4 -g -O3 -assume byterecl
+
+
+EXTRA=-O3 -unroll-aggressive 
+F77FLAGS = -c -g -c 
+CXX = CC -c -O3
+CC = cc -c -O3
+LOADER = CC 
+PLOADER = CC 
+PLOADERC = cc
+F77 = ftn -c  $(EXTRA)
+FLOADER = ftn $(EXTRA)
+
+#LOWLEVEL=SCATFLAT
+#CPPFLAGS= -DSTATIC -DNOSUBDIR -DMPICH_SKIP_MPICXX  -D$(LOWLEVEL) -DREPLICATEDETVALUE -DSINGLENODECONFIGS -DSUPPLEMENTAL -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DGOTOBLAS  -DCPPstyle -DGATIME
+#
+LOWLEVEL=SCATFLAT
+#CPPFLAGS= -DUSEMPI -DSTATIC -DNOSUBDIR  -DGETANDBRDCST -DMPICH_SKIP_MPICXX  -D$(LOWLEVEL) -DREPLICATEDETVALUE -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DGOTOBLAS  -DCPPstyle -DGATIME
+
+#ORIG GOOD ONECPPFLAGS= -DNOSUBDIR -DMPICH_SKIP_MPICXX  -D$(LOWLEVEL) -DREPLICATEDETVALUE -DSTATIC  -DUSEMPI -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DGOTOBLAS  -DCPPstyle -DGATIME
+
+CPPFLAGS= -DNOSUBDIR -DMPICH_SKIP_MPICXX  -D$(LOWLEVEL) -DREPLICATEDETVALUE -DSTATIC -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DGOTOBLAS  -DCPPstyle -DGATIME
+
+CXXFLAGS = -c $(EXTRA) 
+
+HEADERS = PsociTaskManager.hpp PsociNOpopulations.hpp PsociProcessMOcoefs.hpp PsociCIAnalysis.hpp PsociBlasLapack.hpp PsociGAsubspace.hpp PsociConstructHamiltonian.hpp PsociGAhamiltonian.hpp PsociHamiltonian.hpp PsociIntegrals.hpp PsociGADeterminants.hpp PsociDeterminants.hpp PsociConfigs.hpp PsociGAhamiltonian.hpp PsociGAsubspace.hpp PsociGAbasis.hpp PsociDRArestart.hpp PsociDRAservices.hpp PsociGAvectors.hpp PsociTimer.hpp PsociVector.hpp
+OBJS = PsociTaskManager.o PsociNOpopulations.o PsociProcessMOcoefs.o PsociCIAnalysis.o PsociBlasLapack.o PsociGAsubspace.o PsociConstructHamiltonian.o PsociGAhamiltonian.o PsociHamiltonian.o PsociIntegrals.o PsociGADeterminants.o PsociDeterminants.o PsociConfigs.o PsociGAbasis.o PsociDRArestart.o PsociDRAservices.o PsociGAvectors.o PsociTimer.o PsociVector.o
+SRCS = PsociTaskManager.C PsociNOpopulations.C PsociProcessMOcoefs.C PsociCIAnalysis.C PsociBlasLapack.C PsociGAsubspace.C PsociConstructHamiltonian.C PsociGAhamiltonian.C PsociHamiltonian.C PsociIntegrals.C PsociGADeterminants.C PsociDeterminants.C PsociConfigs.C PsociGAsubspace.C PsociGAbasis.C PsociDRArestart.C PsociDRAservices.C PsociGAvectors.C PsociTimer.C PsociVector.C
+LIBS = PsociTaskManager.o PsociNOpopulations.o PsociProcessMOcoefs.o PsociCIAnalysis.o PsociBlasLapack.o PsociConstructHamiltonian.o PsociGAhamiltonian.o PsociGAsubspace.o PsociHamiltonian.o PsociIntegrals.o PsociGADeterminants.o PsociDeterminants.o PsociConfigs.o PsociGAbasis.o PsociDRArestart.o PsociDRAservices.o PsociGAvectors.o PsociVector.o PsociTimer.o
+
+
+FOBS = f77sifsIO.o 
+
+exe: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.x driver.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+vec: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.vector.x driver.vector.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+sub: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.iteration.x driver.iteration.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+con: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.configs.x driver.configs.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+brd: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.brdcst.x driver.brdcst.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+test:   $(OBJS) $(OBJS) $(HEADERS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.readDRA.x driver.readDRA.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+
+det: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.det.x driver.det.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+gadet: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.GAconfigs.x driver.GAconfigs.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+test2:   $(OBJS) $(OBJS) $(HEADERS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.readDRA.WORKS.x driver.readDRA.WORKS.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+
+ints:   $(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.integrals.x driver.integrals.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+ham:	$(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.hamiltonian.x driver.hamiltonian.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+gaham:	$(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.GAhamiltonian.x driver.GAhamiltonian.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS) $(IPM)
+
+gadra:  $(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.GAhamiltonian.Restart.x driver.GAhamiltonian.Restart.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+psoci:  $(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.PSOCI.x driver.PSOCI.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(SCILIBS) $(GALIB)
+
+block:  $(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.PSOCI.blockDavidson.x driver.PSOCI.blockDavidson.C  $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(SCILIBS) $(GALIB)
+
+split:  $(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o  driver.PSOCI.splittest.x driver.PSOCI.splittest.C  $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(SCILIBS) $(GALIB) $(HUGEPAGES)
+
+gatest: $(HEADERS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o  gatest.x gatest.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(SCILIBS) $(GALIB)
+
+testga:  $(OBJS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o  testGA.x testGA.C $(SCILIBS) $(GALIB) $(HUGEPAGES)
+
+
+f77:    $(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(FLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o testFort.x testFort.f $(FOBS) $(LIBS) $(GALIB) $(COLUMBUSLIBS) $(SCILI)
+
+clean:
+	rm -f $(FOBS) $(OBJS) driver.integrals.x 
+
+.o.x:	#default LOADER
+	$(LOADER) -o $@ $*.o  $(LIBS) $(SCILIBS) $(GALIB)
+
+.C.o:	#default compilation
+	$(CXX) -I$(MPIINCLUDE) $(GAINCLUDE) $(CPPFLAGS) $(CXXFLAGS) $(SCIINCS) $<
+
+.f.o:   #fortran defaults
+	$(F77) $(CPPFLAGS) $(F77FLAGS) $(SCIINCS) $<

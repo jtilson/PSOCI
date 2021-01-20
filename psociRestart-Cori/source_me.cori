@@ -1,0 +1,6 @@
+
+module swap PrgEnv-intel PrgEnv-gnu
+module load craype-hugepages2M
+module load boost
+export COLUMBUS=/global/homes/t/tilson/Columbus.5.9.2.gnu.32bit/Columbus
+

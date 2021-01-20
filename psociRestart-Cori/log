@@ -1,0 +1,6 @@
+In file included from driver.PSOCI.splittest.C(69):
+driver.PSOCI.hpp(114): warning #14: extra text after expected end of preprocessing directive
+  #endif DRIVER_PSOCI
+         ^
+
+/usr/bin/ld: cannot find -lgfortran

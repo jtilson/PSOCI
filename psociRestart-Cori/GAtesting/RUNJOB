@@ -1,0 +1,20 @@
+#!/bin/bash -l
+#----------------------------------------------------
+# Sample Slurm job script
+#   for TACC Stampede2 KNL nodes
+#
+#----------------------------------------------------
+
+#SBATCH -J myjob           # Testing
+#SBATCH -p regular          # Queue (partition) name
+#SBATCH -N 4               # Total # of nodes 
+#SBATCH -n 8              # Total # of mpi tasks
+#SBATCH -t 00:10:00        # Run time (hh:mm:ss)
+#SBATCH -C haswell 
+
+## haswell or knl
+export CROSS=cray-aries-slurm
+# haswel or knl
+
+srun ./a.out
+

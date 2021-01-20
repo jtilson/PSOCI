@@ -1,0 +1,192 @@
+
+MPIINCLUDE=$(MPICH_DIR)/include
+
+#GAINCLUDE=-I/global/homes/t/tilson/GA-EXP/exp1.int64/BUILD/include -I/opt/acml/5.1.0/gfortran64_int64/include
+#GALIB=-L/global/homes/t/tilson/GA-EXP/exp1.int64/BUILD/lib -lga++ -lga -larmci -lacml -lgfortran -lm -lquadmath
+#HUGEPAGES=-lhugetlbfs
+##
+#64bitGAINCLUDE=-I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64_int64/include
+#64bitGALIB=-L/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci/ga-5-0/BUILD/lib -lga++ -lga -larmci -lacml -lgfortran -lm -lquadmath
+
+##KEEP ME BEST 
+GAINCLUDE=-I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include
+GALIB=-L/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/lib -lga++ -lga -larmci -lacml -lgfortran -lm -lquadmath
+
+##TEST ga5-1-1
+##SLOWGAINCLUDE=-I/global/u1/t/tilson/GA511-Oct202012/ga-5-1-1/BUILD/include -I/opt/acml/5.1.0/gfortran64/include
+##SLOWGALIB=-L/global/u1/t/tilson/GA511-Oct202012/ga-5-1-1/BUILD/lib -lga++ -lga -larmci -lacml -lgfortran -lm -lquadmath
+
+#regular ga 5.0
+##SLowerstillGAINCLUDE=-I/global/homes/t/tilson/ga-5-0-Mar2012/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include
+#SLowerstillGALIB=-L/global/homes/t/tilson/ga-5-0-Mar2012/ga-5-0/BUILD/lib -lga++ -lga -larmci -lacml -lgfortran -lm -lquadmath
+
+
+##################################################################
+# PNNL RECOMMENDS THE DMAPP VERSION FOR HOPPER ( aka exp1 )
+# BUT NOT the newest one (10118 -its broken) Use this one ( 10143).
+# MOREOVER do noit load crayhugepages. Simply link to them
+
+#NEWEST version 
+#int32 THis is a special version that has been PATCHED by Jeff Daily Dec 7 2012
+#Way too slow
+##GAINCLUDE=-I/global/homes/t/tilson/GA-EXP/exp1_r10118/BUILD/include -I/opt/acml/5.1.0/gfortran64/include
+##GALIB=-L/global/homes/t/tilson/GA-EXP/exp1_r10118/BUILD/lib -lga++ -lga -larmci -lacml -lgfortran -lm -lquadmath -lhugetlbfs
+
+#INTEL
+#MKLHOME=/opt/intel/composer_xe_2011_sp1.8.273/mkl/lib/intel64
+#GAINCLUDE=-I/global/homes/t/tilson/GA-EXP/exp1_r10118/BUILD/include -I/opt/intel/composer_xe_2011_sp1.8.273/mkl/include
+#GALIB=-L/global/homes/t/tilson/GA-EXP/exp1_r10118/BUILD/lib -lga++ -lga -larmci -L$(MKLHOME) -lmkl_solver_lp64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lhugetlbfs
+
+#SCILIBSD=-L$(MKLHOME) -lmkl_solver_lp64 -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lpthread -lhugetlbfs
+#SCILIBSD=-L$(MKLHOME) -lmkl -lmkl_scalapack_lp64 -lmkl_solver -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lpthread 
+
+
+
+#int32THis is a newer exp1 but p[recluster code: r10143:  THis is a special version that has been PATCHED by Jeff Daily Dec 7 2012
+#GAINCLUDE=-I/global/homes/t/tilson/GA-EXP/ga-exp1/BUILD/include -I/opt/acml/5.1.0/gfortran64/include
+#GALIB=-L/global/homes/t/tilson/GA-EXP/ga-exp1/BUILD/lib -lga++ -lga -larmci -lacml -lgfortran -lm -lquadmath -lhugetlbfs
+
+
+#int64 older exp1 version
+#GAINCLUDE=-I/global/homes/t/tilson/GA-EXP/OLD-EXP1/exp1.int64/BUILD/include -I/opt/acml/5.1.0/gfortran64_int64/include
+#GALIB=-L/global/homes/t/tilson/GA-EXP/OLD-EXP1/exp1.int64/BUILD/lib -lga++ -lga -larmci -lacml -lgfortran -lm -lquadmath
+#HUGEPAGES=-lhugetlbfs
+
+#int32 older exp1 version
+#GAINCLUDE=-I/global/homes/t/tilson/GA-EXP/OLD-EXP1/exp1/BUILD/include -I/opt/acml/5.1.0/gfortran64/include
+#GALIB=-L/global/homes/t/tilson/GA-EXP/OLD-EXP1/exp1/BUILD/lib -lga++ -lga -larmci -lacml -lgfortran -lm -lquadmath
+#HUGEPAGES=-lhugetlbfs
+
+
+#int32
+COLUMBUSDIR=/global/homes/t/tilson/Columbus.5.9.2.gnu.32bit/Columbus
+COLUMBUSLIBS=$(COLUMBUSDIR)/colib.a $(COLUMBUSDIR)/blaswrapper.a
+F77FLAGS = -c -g -O0
+F77 = ftn -c  $(EXTRA)
+FLOADER = ftn $(EXTRA)
+
+#MKLHOME=/opt/intel/composer_xe_2011_sp1.8.273/mkl/lib/intel64
+#COLUMBUSDIR=/global/homes/t/tilson/Columbus.5.9.2.intel/Columbus
+#COLUMBUSLIBS=$(COLUMBUSDIR)/colib.a $(COLUMBUSDIR)/blaswrapper.a  
+#F77FLAGS = -c -g -O0
+#F77 = ftn -c  $(EXTRA)
+#LOADER = ftn $(EXTRA)
+
+
+
+#int64
+#COLUMBUSDIR=/global/homes/t/tilson/Columbus.5.9.2.gnu/Columbus
+#COLUMBUSLIBS=$(COLUMBUSDIR)/colib.a $(COLUMBUSDIR)/blaswrapper.a
+#F77FLAGS = -c -g -O0
+#F77 = ftn -c -fdefault-integer-8  $(EXTRA)
+#FLOADER = ftn -fdefault-integer-8  $(EXTRA)
+
+# replicates ORBMAP
+#CPPFLAGS =  -DGETANDBRDCST -DINNERSCATTER -DNEWACCUMULATEDSCATTER -DDIRECT -DMODIFIED_EXPAND -DSUPPLEMENTAL -DSINGLENODECONFIGS  -DORBMAPCIDENSITY -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML -DGATIME
+
+
+#INT32 NEW DEFINES: WHich kind of LowLevel acc do you want? TACC, LOOPNPUT, SCATFLAT, or SCATNOFLAT
+# need -DGAEXP ( formally  -DHOPPER) for 5.1.1 only
+#LOWLEVEL=SCATNOFLAT
+#CPPFLAGS = -DHOPPER -D$(LOWLEVEL) -DSTAGGERCHUNKLIST -DGETANDBRDCST -DINNERSCATTER -DDIRECT -DNEWACCUMULATEDSCATTER -DNEWORBMAP -DMODIFIED_EXPAND -DSUPPLEMENTAL -DSINGLENODECONFIGS -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML -DCPPstyle -DGATIME
+
+#-DNEWORBMAP
+
+#LOWLEVEL=SCATFLAT
+#CPPFLAGS = -D$(LOWLEVEL) -DDIAGGOP -DDIRECT -DGETANDBRDCST -DINNERSCATTER -DNEWACCUMULATEDSCATTER -DMODIFIED_EXPAND -DSUPPLEMENTAL -DSINGLENODECONFIGS -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS  -DBINARY -DACML -DCPPstyle -DGATIME
+#
+#BEST -DANLARMCI TACC
+#LOWLEVEL=SCATFLAT
+#CPPFLAGS=  -DGAEXP -DANLARMCI  -DMPICH_SKIP_MPICXX  -D$(LOWLEVEL) -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME
+
+LOWLEVEL=SCATFLAT
+CPPFLAGS= -DMPICH_SKIP_MPICXX  -D$(LOWLEVEL) -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME
+
+
+EXTRA= -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops  #-ftree-vectorizer-verbose=2 #-ffast-math -funroll-loops
+CXX = CC  $(EXTRA) 
+LOADER = CC  $(EXTRA)
+PLOADER = CC $(EXTRA)  
+#PLOADER = /global/homes/t/tallent/hpctoolkit/hpctoolkit.trunk/INSTALL/bin/hpclink --ga  CC $(EXTRA) 
+#PLOADER = /global/homes/t/tallent/hpctoolkit/hpctoolkit.trunk/INSTALL/bin/hpclink  CC $(EXTRA)
+
+CXXFLAGS = -c $(EXTRA) 
+LDFLAGS =  $(HWLOCLIBS)
+
+HEADERS = PsociTaskManager.hpp PsociNOpopulations.hpp PsociProcessMOcoefs.hpp PsociCIAnalysis.hpp PsociBlasLapack.hpp PsociGAsubspace.hpp PsociConstructHamiltonian.hpp PsociGAhamiltonian.hpp PsociHamiltonian.hpp PsociIntegrals.hpp PsociGADeterminants.hpp PsociDeterminants.hpp PsociConfigs.hpp PsociGAhamiltonian.hpp PsociGAsubspace.hpp PsociGAbasis.hpp PsociDRArestart.hpp PsociDRAservices.hpp PsociGAvectors.hpp PsociTimer.hpp PsociVector.hpp
+OBJS = PsociTaskManager.o PsociNOpopulations.o PsociProcessMOcoefs.o PsociCIAnalysis.o PsociBlasLapack.o PsociGAsubspace.o PsociConstructHamiltonian.o PsociGAhamiltonian.o PsociHamiltonian.o PsociIntegrals.o PsociGADeterminants.o PsociDeterminants.o PsociConfigs.o PsociGAbasis.o PsociDRArestart.o PsociDRAservices.o PsociGAvectors.o PsociTimer.o PsociVector.o
+SRCS = PsociTaskManager.C PsociNOpopulations.C PsociProcessMOcoefs.C PsociCIAnalysis.C PsociBlasLapack.C PsociGAsubspace.C PsociConstructHamiltonian.C PsociGAhamiltonian.C PsociHamiltonian.C PsociIntegrals.C PsociGADeterminants.C PsociDeterminants.C PsociConfigs.C PsociGAsubspace.C PsociGAbasis.C PsociDRArestart.C PsociDRAservices.C PsociGAvectors.C PsociTimer.C PsociVector.C
+LIBS = PsociTaskManager.o PsociNOpopulations.o PsociProcessMOcoefs.o PsociCIAnalysis.o PsociBlasLapack.o PsociConstructHamiltonian.o PsociGAhamiltonian.o PsociGAsubspace.o PsociHamiltonian.o PsociIntegrals.o PsociGADeterminants.o PsociDeterminants.o PsociConfigs.o PsociGAbasis.o PsociDRArestart.o PsociDRAservices.o PsociGAvectors.o PsociVector.o PsociTimer.o
+
+
+FOBS = f77sifsIO.o 
+
+exe: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.x driver.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+vec: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.vector.x driver.vector.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+sub: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.iteration.x driver.iteration.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+con: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.configs.x driver.configs.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+brd: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.brdcst.x driver.brdcst.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+test:   $(OBJS) $(OBJS) $(HEADERS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.readDRA.x driver.readDRA.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+
+det: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.det.x driver.det.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+gadet: 	$(OBJS) $(OBJS) $(HEADERS) 
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.GAconfigs.x driver.GAconfigs.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+test2:   $(OBJS) $(OBJS) $(HEADERS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.readDRA.WORKS.x driver.readDRA.WORKS.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+
+ints:   $(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.integrals.x driver.integrals.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+ham:	$(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.hamiltonian.x driver.hamiltonian.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+gaham:	$(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.GAhamiltonian.x driver.GAhamiltonian.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS) $(IPM)
+
+gadra:  $(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.GAhamiltonian.Restart.x driver.GAhamiltonian.Restart.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(GALIB) $(SCILIBS)
+
+psoci:  $(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.PSOCI.x driver.PSOCI.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(SCILIBS) $(GALIB)
+
+block:  $(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o driver.PSOCI.blockDavidson.x driver.PSOCI.blockDavidson.C  $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(SCILIBS) $(GALIB)
+
+split:  $(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o  driver.PSOCI.splittest.x driver.PSOCI.splittest.C  $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(SCILIBS) $(GALIB) $(HUGEPAGES)
+
+gatest: $(HEADERS)
+	$(PLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o  gatest.x gatest.C $(FOBS) $(LIBS) $(COLUMBUSLIBS) $(SCILIBS) $(GALIB)
+
+
+
+f77:    $(OBJS) $(OBJS) $(HEADERS) $(FOBS)
+	$(FLOADER) $(LDFLAGS) $(GAINCLUDE) $(CPPFLAGS) -o testFort.x testFort.f $(FOBS) $(LIBS) $(GALIB) $(COLUMBUSLIBS) $(SCILI)
+
+clean:
+	rm -f $(FOBS) $(OBJS) driver.integrals.x 
+
+.o.x:	#default LOADER
+	$(LOADER) -o $@ $*.o  $(LIBS) $(SCILIBS) $(GALIB)
+
+.C.o:	#default compilation
+	$(CXX) -I$(MPIINCLUDE) $(GAINCLUDE) $(CPPFLAGS) $(CXXFLAGS) $(SCIINCS) $<
+
+.f.o:   #fortran defaults
+	$(F77) $(CPPFLAGS) $(F77FLAGS) $(SCIINCS) $<

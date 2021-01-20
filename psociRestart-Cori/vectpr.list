@@ -1,0 +1,6267 @@
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociTaskManager.C
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociNOpopulations.C
+PsociNOpopulations.C: In member function 'long int PsociNOpopulations::constructDensityMatrix(int, GA::GlobalArray*, PsociProcessMOcoefs&)':
+PsociNOpopulations.C:873:26: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+PsociNOpopulations.C: In member function 'void PsociNOpopulations::replicateCIdensity(bool, int, int, std::vector<std::vector<double> >&)':
+PsociNOpopulations.C:1028:15: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+
+Analyzing loop at PsociNOpopulations.C:531
+
+Analyzing loop at PsociNOpopulations.C:533
+
+533: not vectorized: loop contains function calls or data references that cannot be analyzed
+PsociNOpopulations.C:502: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociNOpopulations.C:65: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociNOpopulations.C:70: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/ostream:533
+
+Analyzing loop at PsociNOpopulations.C:772
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/ostream:533
+
+Analyzing loop at PsociNOpopulations.C:758
+
+758: not vectorized: loop contains function calls or data references that cannot be analyzed
+PsociNOpopulations.C:730: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociNOpopulations.C:792
+
+PsociNOpopulations.C:786: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociNOpopulations.C:812
+
+Analyzing loop at PsociNOpopulations.C:816
+
+Analyzing loop at PsociNOpopulations.C:817
+
+PsociNOpopulations.C:805: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociNOpopulations.C:1032
+
+1032: not vectorized: loop contains function calls or data references that cannot be analyzed
+PsociNOpopulations.C:988: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociNOpopulations.C:1032
+
+1032: not vectorized: loop contains function calls or data references that cannot be analyzed
+PsociNOpopulations.C:1010: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociIntegrals.hpp:116: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociNOpopulations.C:1055: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:479
+
+Analyzing loop at PsociNOpopulations.C:480
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:461
+
+Analyzing loop at PsociNOpopulations.C:462
+
+PsociNOpopulations.C:456: note: vectorized 2 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:292: note: vectorized 1 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:387: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociNOpopulations.C:833
+
+Analyzing loop at PsociNOpopulations.C:436
+
+Analyzing loop at PsociNOpopulations.C:442
+
+Analyzing loop at PsociNOpopulations.C:419
+
+Analyzing loop at PsociNOpopulations.C:394
+
+Analyzing loop at PsociNOpopulations.C:395
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:383
+
+
+Vectorizing loop at PsociNOpopulations.C:383
+
+383: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:378
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociNOpopulations.C:353: note: vectorized 5 loops in function.
+
+Analyzing loop at PsociNOpopulations.C:1362
+
+Analyzing loop at PsociNOpopulations.C:1391
+
+Analyzing loop at PsociNOpopulations.C:1394
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:1367
+
+Analyzing loop at PsociNOpopulations.C:1368
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:1347
+
+PsociNOpopulations.C:1330: note: vectorized 2 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+/opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:66: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:339
+
+/opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:321: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:462
+
+462: not vectorized: loop contains function calls or data references that cannot be analyzed
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:462
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:461
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:445
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:451
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:439
+
+439: not vectorized: relevant stmt not supported: D.115373_74 = &MEM[(struct _List_base *)D.103586_113]._M_impl._M_node;
+
+/opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:431: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1076: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociNOpopulations.C:217
+
+Analyzing loop at PsociNOpopulations.C:232
+
+
+Vectorizing loop at PsociNOpopulations.C:232
+
+232: created 1 versioning for alias checks.
+
+232: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:224
+
+Analyzing loop at PsociNOpopulations.C:227
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:218
+
+
+Vectorizing loop at PsociNOpopulations.C:218
+
+218: created 1 versioning for alias checks.
+
+218: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:195
+
+
+Vectorizing loop at PsociNOpopulations.C:195
+
+195: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:188
+
+PsociNOpopulations.C:173: note: vectorized 5 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:161: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:531
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociNOpopulations.C:1478
+
+Analyzing loop at PsociNOpopulations.C:1483
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociNOpopulations.C:1448: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociNOpopulations.C:1656
+
+Analyzing loop at PsociNOpopulations.C:1664
+
+Analyzing loop at PsociNOpopulations.C:1670
+
+Analyzing loop at PsociNOpopulations.C:1672
+
+Analyzing loop at PsociNOpopulations.C:1672
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1129
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1129
+
+Analyzing loop at PsociNOpopulations.C:1629
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1318
+
+PsociNOpopulations.C:1598: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociNOpopulations.C:1570
+
+Analyzing loop at PsociNOpopulations.C:1575
+
+Analyzing loop at PsociNOpopulations.C:1579
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1129
+
+Analyzing loop at PsociNOpopulations.C:1551
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1318
+
+PsociNOpopulations.C:1510: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociNOpopulations.C:1459
+
+Analyzing loop at PsociNOpopulations.C:1463
+
+Analyzing loop at PsociNOpopulations.C:1478
+
+Analyzing loop at PsociNOpopulations.C:1483
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociNOpopulations.C:1448: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociNOpopulations.C:1748
+
+Analyzing loop at PsociNOpopulations.C:1753
+
+Analyzing loop at PsociNOpopulations.C:1758
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1129
+
+Analyzing loop at PsociNOpopulations.C:1730
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1318
+
+PsociNOpopulations.C:1694: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociNOpopulations.C:1123
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at PsociNOpopulations.C:1170
+
+1170: not vectorized: data ref analysis failed D.101330_178 = *D.118738_478;
+
+Analyzing loop at PsociNOpopulations.C:1171
+
+1171: not vectorized: not suitable for gather D.101330_178 = *D.118738_478;
+
+Analyzing loop at PsociNOpopulations.C:1162
+
+1162: not vectorized: data ref analysis failed D.109244_149 = *D.118696_460;
+
+Analyzing loop at PsociNOpopulations.C:1163
+
+1163: not vectorized: not suitable for gather D.109244_149 = *D.118696_460;
+
+Analyzing loop at PsociNOpopulations.C:1145
+
+Analyzing loop at PsociNOpopulations.C:1146
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:1131
+
+Analyzing loop at PsociNOpopulations.C:1132
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:1102
+
+PsociNOpopulations.C:1081: note: vectorized 3 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociNOpopulations.C:1249
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:188
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:188
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociNOpopulations.C:1275
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:188
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:188
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at PsociNOpopulations.C:1297
+
+1297: not vectorized: data ref analysis failed D.101408_196 = *D.118516_455;
+
+Analyzing loop at PsociNOpopulations.C:1298
+
+1298: not vectorized: not suitable for gather D.101408_196 = *D.118516_455;
+
+Analyzing loop at PsociNOpopulations.C:1288
+
+1288: not vectorized: data ref analysis failed D.108841_173 = *D.118488_443;
+
+Analyzing loop at PsociNOpopulations.C:1289
+
+1289: not vectorized: not suitable for gather D.108841_173 = *D.118488_443;
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:1280
+
+
+Vectorizing loop at PsociNOpopulations.C:1280
+
+1280: created 1 versioning for alias checks.
+
+1280: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:1256
+
+Analyzing loop at PsociNOpopulations.C:1257
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:1223
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociNOpopulations.C:1205: note: vectorized 7 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:531
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:309
+
+Analyzing loop at PsociNOpopulations.C:324
+
+
+Vectorizing loop at PsociNOpopulations.C:324
+
+324: created 1 versioning for alias checks.
+
+324: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:306
+
+Analyzing loop at PsociNOpopulations.C:287
+
+Analyzing loop at PsociNOpopulations.C:289
+
+
+Vectorizing loop at PsociNOpopulations.C:289
+
+289: created 1 versioning for alias checks.
+
+289: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociNOpopulations.C:269: note: vectorized 3 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/ostream:533
+
+Analyzing loop at PsociNOpopulations.C:672
+
+Analyzing loop at PsociNOpopulations.C:621
+
+Analyzing loop at PsociNOpopulations.C:658
+
+Analyzing loop at PsociNOpopulations.C:660
+
+
+Vectorizing loop at PsociNOpopulations.C:660
+
+660: created 1 versioning for alias checks.
+
+660: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociNOpopulations.C:606
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:188
+
+PsociNOpopulations.C:568: note: vectorized 9 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociNOpopulations.C:1035
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociNOpopulations.C:857: note: vectorized 1 loops in function.
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociProcessMOcoefs.C
+
+Analyzing loop at PsociProcessMOcoefs.C:420
+
+PsociProcessMOcoefs.C:416: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociProcessMOcoefs.C:542
+
+Analyzing loop at PsociProcessMOcoefs.C:536
+
+Analyzing loop at PsociProcessMOcoefs.C:529
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/basic_string.h:290
+
+PsociProcessMOcoefs.C:511: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociProcessMOcoefs.C:570
+
+Analyzing loop at PsociProcessMOcoefs.C:575
+
+Analyzing loop at PsociProcessMOcoefs.C:575
+
+575: not vectorized: loop contains function calls or data references that cannot be analyzed
+PsociProcessMOcoefs.C:564: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:387: note: vectorized 1 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:161: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociProcessMOcoefs.C:611: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociProcessMOcoefs.C:588: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:531
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociProcessMOcoefs.C:505
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/basic_string.h:183
+
+Analyzing loop at PsociProcessMOcoefs.C:493
+
+Analyzing loop at PsociProcessMOcoefs.C:489
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/basic_string.h:183
+
+Analyzing loop at PsociProcessMOcoefs.C:482
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: not vectorized: vectorization not profitable.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: not vectorized: vectorization not profitable.
+PsociProcessMOcoefs.C:437: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociProcessMOcoefs.C:117
+
+Analyzing loop at PsociProcessMOcoefs.C:94
+
+PsociProcessMOcoefs.C:84: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociProcessMOcoefs.C:209
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociProcessMOcoefs.C:229
+
+Analyzing loop at PsociProcessMOcoefs.C:231
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at PsociProcessMOcoefs.C:200
+
+Analyzing loop at PsociProcessMOcoefs.C:202
+
+Analyzing loop at PsociProcessMOcoefs.C:196
+
+Analyzing loop at PsociProcessMOcoefs.C:191
+
+
+Vectorizing loop at PsociProcessMOcoefs.C:191
+
+191: created 1 versioning for alias checks.
+
+191: LOOP VECTORIZED.
+Analyzing loop at PsociProcessMOcoefs.C:187
+
+
+Vectorizing loop at PsociProcessMOcoefs.C:187
+
+187: created 1 versioning for alias checks.
+
+187: LOOP VECTORIZED.
+PsociProcessMOcoefs.C:170: note: vectorized 2 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociProcessMOcoefs.C:333
+
+Analyzing loop at PsociProcessMOcoefs.C:317
+
+Analyzing loop at PsociProcessMOcoefs.C:319
+
+Analyzing loop at PsociProcessMOcoefs.C:312
+
+Analyzing loop at PsociProcessMOcoefs.C:307
+
+Analyzing loop at PsociProcessMOcoefs.C:303
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociProcessMOcoefs.C:286
+
+Analyzing loop at PsociProcessMOcoefs.C:288
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+PsociProcessMOcoefs.C:254: note: vectorized 2 loops in function.
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociCIAnalysis.C
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1076: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociCIAnalysis.C:386
+
+Analyzing loop at PsociCIAnalysis.C:381
+
+PsociCIAnalysis.C:356: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+/opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:66: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+/opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:66: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:462
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:462
+
+462: not vectorized: loop contains function calls or data references that cannot be analyzed
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:461
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:339
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:445
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:330
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:339
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:439
+
+439: not vectorized: relevant stmt not supported: D.63927_74 = &MEM[(struct _List_base *)D.56910_209]._M_impl._M_node;
+
+/opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:431: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_iterator.h:164
+
+Analyzing loop at PsociCIAnalysis.C:310
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_iterator_base_funcs.h:80
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_list.h:758
+
+PsociCIAnalysis.C:268: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1282
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1272: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociCIAnalysis.C:117
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+Analyzing loop at PsociCIAnalysis.C:206
+
+Analyzing loop at PsociCIAnalysis.C:231
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_list.h:1171
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_list.h:758
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_list.h:156
+
+Analyzing loop at PsociCIAnalysis.C:167
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:462
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:460
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:339
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:443
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:330
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:339
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:439
+
+439: not vectorized: relevant stmt not supported: D.69507_1602 = &MEM[(struct _List_base *)D.69499_2191]._M_impl._M_node;
+
+Analyzing loop at PsociCIAnalysis.C:149
+
+Analyzing loop at PsociCIAnalysis.C:132
+
+Analyzing loop at PsociCIAnalysis.C:137
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociCIAnalysis.C:42: note: vectorized 3 loops in function.
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociBlasLapack.C
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociGAsubspace.C
+
+Analyzing loop at PsociGAsubspace.C:738
+
+PsociGAsubspace.C:695: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAsubspace.C:756
+
+PsociGAsubspace.C:751: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAsubspace.C:1082: note: vectorized 4 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAsubspace.C:997: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociGAsubspace.C:946
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAsubspace.C:871: note: vectorized 3 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAsubspace.C:365: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAsubspace.C:319
+
+Analyzing loop at PsociGAsubspace.C:330
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAsubspace.C:270: note: vectorized 5 loops in function.
+
+Analyzing loop at PsociGAsubspace.C:738
+
+738: not vectorized: loop contains function calls or data references that cannot be analyzed
+Analyzing loop at PsociGAsubspace.C:499
+
+Analyzing loop at PsociGAsubspace.C:512
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAsubspace.C:460: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAsubspace.C:738
+
+738: not vectorized: loop contains function calls or data references that cannot be analyzed
+Analyzing loop at PsociGAsubspace.C:821
+
+Analyzing loop at PsociGAsubspace.C:843
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAsubspace.C:772: note: vectorized 3 loops in function.
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociConstructHamiltonian.C
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociGAhamiltonian.C
+PsociGAhamiltonian.C: In member function 'int PsociGAhamiltonian::matrixProductScatter(int, int&, int&, std::vector<int>&, std::vector<std::vector<int> >&, std::vector<std::vector<double> >&, std::vector<int>&, std::vector<double>&, GA::GlobalArray*)':
+PsociGAhamiltonian.C:11940:27: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2183
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:530
+
+530: not vectorized: no vectype for stmt: *__result_14 = MEM[(const struct pair &)__last$_M_current_16];
+ scalar_type: const struct pair
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2143
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2178: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:1132: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:3367
+
+PsociGAhamiltonian.C:3361: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:3660
+
+PsociGAhamiltonian.C:3632: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:3742
+
+PsociGAhamiltonian.C:3722: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:3798
+
+PsociGAhamiltonian.C:3767: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:8458
+
+Analyzing loop at PsociGAhamiltonian.C:12096
+
+PsociGAhamiltonian.C:8426: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:8819
+
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+PsociGAhamiltonian.C:8816: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:8827
+
+Analyzing loop at PsociGAhamiltonian.C:8879
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8879
+
+8879: LOOP VECTORIZED.
+PsociGAhamiltonian.C:8824: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:8835
+
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+PsociGAhamiltonian.C:8832: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:8843
+
+Analyzing loop at PsociGAhamiltonian.C:8879
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8879
+
+8879: LOOP VECTORIZED.
+PsociGAhamiltonian.C:8840: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+PsociGAhamiltonian.C:8851: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:8869
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8869
+
+8869: LOOP VECTORIZED.
+PsociGAhamiltonian.C:8865: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:8879
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8879
+
+8879: LOOP VECTORIZED.
+PsociGAhamiltonian.C:8875: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:8892
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8892
+
+8892: LOOP VECTORIZED.
+PsociGAhamiltonian.C:8888: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:10807
+
+PsociGAhamiltonian.C:10803: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:10824
+
+PsociGAhamiltonian.C:10819: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:10824
+
+PsociGAhamiltonian.C:10943: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:10824
+
+PsociGAhamiltonian.C:10966: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11012
+
+Analyzing loop at PsociGAhamiltonian.C:11015
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1129
+
+PsociGAhamiltonian.C:10994: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11103
+
+Analyzing loop at PsociGAhamiltonian.C:11105
+
+
+Vectorizing loop at PsociGAhamiltonian.C:11105
+
+11105: created 2 versioning for alias checks.
+
+11105: LOOP VECTORIZED.
+PsociGAhamiltonian.C:11091: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11525
+
+11525: not vectorized: loop contains function calls or data references that cannot be analyzed
+PsociGAhamiltonian.C:11514: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11548
+
+PsociGAhamiltonian.C:11546: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:292: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:4074
+
+Analyzing loop at PsociGAhamiltonian.C:4076
+
+
+Vectorizing loop at PsociGAhamiltonian.C:4076
+
+4076: created 1 versioning for alias checks.
+
+4076: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:4062
+
+Analyzing loop at PsociGAhamiltonian.C:4064
+
+
+Vectorizing loop at PsociGAhamiltonian.C:4064
+
+4064: created 1 versioning for alias checks.
+
+4064: LOOP VECTORIZED.
+PsociGAhamiltonian.C:4057: note: vectorized 2 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:292: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:8297
+
+PsociGAhamiltonian.C:8278: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:7931
+
+Analyzing loop at PsociGAhamiltonian.C:7956
+
+Analyzing loop at PsociGAhamiltonian.C:7988
+
+Analyzing loop at PsociGAhamiltonian.C:7998
+
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+PsociGAhamiltonian.C:7781: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:6336
+
+Analyzing loop at PsociGAhamiltonian.C:6345
+
+Analyzing loop at PsociGAhamiltonian.C:6366
+
+Analyzing loop at PsociGAhamiltonian.C:6392
+
+Analyzing loop at PsociGAhamiltonian.C:6431
+
+Analyzing loop at PsociGAhamiltonian.C:6413
+
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAhamiltonian.C:6202: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:5024
+
+Analyzing loop at PsociGAhamiltonian.C:5031
+
+Analyzing loop at PsociGAhamiltonian.C:5074
+
+Analyzing loop at PsociGAhamiltonian.C:5100
+
+5100: not vectorized: not suitable for gather D.128021_238 = *D.143148_476;
+
+Analyzing loop at PsociGAhamiltonian.C:5088
+
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+PsociGAhamiltonian.C:4936: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:4488
+
+Analyzing loop at PsociGAhamiltonian.C:4507
+
+Analyzing loop at PsociGAhamiltonian.C:4539
+
+4539: not vectorized: not suitable for gather D.128490_117 = *D.143360_287;
+
+Analyzing loop at PsociGAhamiltonian.C:4533
+
+4533: not vectorized: not suitable for gather D.128475_93 = *D.143332_275;
+
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+PsociGAhamiltonian.C:4370: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:7691
+
+Analyzing loop at PsociGAhamiltonian.C:7717
+
+Analyzing loop at PsociGAhamiltonian.C:7728
+
+7728: not vectorized: not suitable for gather D.125583_137 = *D.142570_362;
+
+Analyzing loop at PsociGAhamiltonian.C:7724
+
+7724: not vectorized: not suitable for gather D.125567_113 = *D.142542_350;
+
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+PsociGAhamiltonian.C:7565: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:8143
+
+Analyzing loop at PsociGAhamiltonian.C:8149
+
+Analyzing loop at PsociGAhamiltonian.C:8211
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8211
+
+8211: created 1 versioning for alias checks.
+
+8211: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:8206
+
+8206: not vectorized: unsupported use in stmt.
+Analyzing loop at PsociGAhamiltonian.C:8869
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8869
+
+8869: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:8194
+
+PsociGAhamiltonian.C:8046: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:4253
+
+Analyzing loop at PsociGAhamiltonian.C:4290
+
+Analyzing loop at PsociGAhamiltonian.C:4316
+
+4316: not vectorized: not suitable for gather D.128635_148 = *D.143550_332;
+
+Analyzing loop at PsociGAhamiltonian.C:4310
+
+4310: not vectorized: not suitable for gather D.128617_120 = *D.143515_317;
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAhamiltonian.C:4104: note: vectorized 2 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1076: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:339
+
+/opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:321: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1318
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1309: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:530
+
+530: not vectorized: more than one data ref in stmt: *__result_85 = MEM[(const struct pair &)__last_87];
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:76
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:76
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:71
+
+/opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:66: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:462
+
+462: not vectorized: loop contains function calls or data references that cannot be analyzed
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:462
+
+462: not vectorized: loop contains function calls or data references that cannot be analyzed
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:461
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:445
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:330
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:339
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:439
+
+439: not vectorized: relevant stmt not supported: D.140691_74 = &MEM[(struct _List_base *)D.111971_176]._M_impl._M_node;
+
+/opt/gcc/4.7.2/snos/include/g++/bits/list.tcc:431: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_iterator_base_funcs.h:80
+
+PsociGAhamiltonian.C:11043: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2183
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2143
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2178: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2219
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2143
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2213: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:530
+
+530: not vectorized: no vectype for stmt: *__result_86 = MEM[(const struct pair &)__last_88];
+ scalar_type: const struct pair
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:76
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:76
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2143
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2136: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2219
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2213: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:182: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:182: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:182: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:182: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:675
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:672: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:3347
+
+PsociGAhamiltonian.C:3332: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:9500
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+Analyzing loop at PsociGAhamiltonian.C:9486
+
+Analyzing loop at PsociGAhamiltonian.C:9482
+
+Analyzing loop at PsociGAhamiltonian.C:9469
+
+Analyzing loop at PsociGAhamiltonian.C:9465
+
+PsociGAhamiltonian.C:9456: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:9410
+
+Analyzing loop at PsociGAhamiltonian.C:9420
+
+Analyzing loop at PsociGAhamiltonian.C:9423
+
+
+Vectorizing loop at PsociGAhamiltonian.C:9423
+
+9423: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:9403
+
+Analyzing loop at PsociGAhamiltonian.C:9397
+
+Analyzing loop at PsociGAhamiltonian.C:9439
+
+Analyzing loop at PsociGAhamiltonian.C:9442
+
+
+Vectorizing loop at PsociGAhamiltonian.C:9442
+
+9442: LOOP VECTORIZED.
+PsociGAhamiltonian.C:9367: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:9309
+
+Analyzing loop at PsociGAhamiltonian.C:9319
+
+Analyzing loop at PsociGAhamiltonian.C:9322
+
+
+Vectorizing loop at PsociGAhamiltonian.C:9322
+
+9322: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:9302
+
+Analyzing loop at PsociGAhamiltonian.C:9296
+
+Analyzing loop at PsociGAhamiltonian.C:9343
+
+Analyzing loop at PsociGAhamiltonian.C:9346
+
+
+Vectorizing loop at PsociGAhamiltonian.C:9346
+
+9346: LOOP VECTORIZED.
+PsociGAhamiltonian.C:9262: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:10465
+
+Analyzing loop at PsociGAhamiltonian.C:10478
+
+Analyzing loop at PsociGAhamiltonian.C:10501
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAhamiltonian.C:10405: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:10141
+
+Analyzing loop at PsociGAhamiltonian.C:10158
+
+Analyzing loop at PsociGAhamiltonian.C:10188
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAhamiltonian.C:10055: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11558
+
+PsociGAhamiltonian.C:11554: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:10931
+
+PsociGAhamiltonian.C:10917: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:10879
+
+PsociGAhamiltonian.C:10864: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:10838
+
+PsociGAhamiltonian.C:10834: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:793
+
+PsociGAhamiltonian.C:12056: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:793
+
+PsociGAhamiltonian.C:12079: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11602
+
+Analyzing loop at PsociGAhamiltonian.C:11585
+
+PsociGAhamiltonian.C:11575: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:10637
+
+Analyzing loop at PsociGAhamiltonian.C:10647
+
+Analyzing loop at PsociGAhamiltonian.C:10662
+
+Analyzing loop at PsociGAhamiltonian.C:10684
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAhamiltonian.C:10563: note: vectorized 2 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1028
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1019: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_multimap.h:153
+
+Analyzing loop at PsociGAhamiltonian.C:7438
+
+Analyzing loop at PsociGAhamiltonian.C:7463
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at PsociGAhamiltonian.C:11012
+
+Analyzing loop at PsociGAhamiltonian.C:11015
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1129
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1485
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1485
+
+Analyzing loop at PsociGAhamiltonian.C:7493
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1318
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1318
+
+Analyzing loop at PsociGAhamiltonian.C:7473
+
+
+Vectorizing loop at PsociGAhamiltonian.C:7473
+
+7473: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:8869
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8869
+
+8869: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:11104
+
+Analyzing loop at PsociGAhamiltonian.C:11105
+
+
+Vectorizing loop at PsociGAhamiltonian.C:11105
+
+11105: created 1 versioning for alias checks.
+
+11105: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:10825
+
+Analyzing loop at PsociGAhamiltonian.C:7446
+
+PsociGAhamiltonian.C:7296: note: vectorized 3 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_multimap.h:153
+
+Analyzing loop at PsociGAhamiltonian.C:4692
+
+Analyzing loop at PsociGAhamiltonian.C:4768
+
+Analyzing loop at PsociGAhamiltonian.C:11012
+
+Analyzing loop at PsociGAhamiltonian.C:11015
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1129
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1485
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1485
+
+Analyzing loop at PsociGAhamiltonian.C:4809
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1318
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1318
+
+Analyzing loop at PsociGAhamiltonian.C:4788
+
+Analyzing loop at PsociGAhamiltonian.C:8869
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8869
+
+8869: LOOP VECTORIZED.
+PsociGAhamiltonian.C:4582: note: vectorized 1 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:186
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:307
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:302: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:444
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:421: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:1973
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:1968: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:498
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:489: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2360
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2294
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2292
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2289
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2349: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:70: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:70: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:530
+
+530: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:527: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:183
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:179: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:307
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:302: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:444
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:421: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:1973
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:1968: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:498
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_heap.h:489: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2360
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2294
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2292
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2289
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:2349: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:530
+
+530: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:527: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:675
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:672: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:10807
+
+PsociGAhamiltonian.C:10902: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11489
+
+Analyzing loop at PsociGAhamiltonian.C:12096
+
+Analyzing loop at PsociGAhamiltonian.C:11464
+
+PsociGAhamiltonian.C:11453: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:4025
+
+Analyzing loop at PsociGAhamiltonian.C:4033
+
+PsociGAhamiltonian.C:3987: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:3421
+
+Analyzing loop at PsociGAhamiltonian.C:3432
+
+PsociGAhamiltonian.C:3387: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:12010
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+PsociGAhamiltonian.C:11972: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:2847
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGAhamiltonian.C:2884
+
+Analyzing loop at PsociGAhamiltonian.C:2898
+
+Analyzing loop at PsociGAhamiltonian.C:11603
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociGAhamiltonian.C:2764: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:2379
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGAhamiltonian.C:2414
+
+PsociGAhamiltonian.C:2306: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:1935
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGAhamiltonian.C:1979
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAhamiltonian.C:1838: note: vectorized 1 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGAhamiltonian.C:2147
+
+Analyzing loop at PsociGAhamiltonian.C:2226
+
+Analyzing loop at PsociGAhamiltonian.C:2184
+
+Analyzing loop at PsociGAhamiltonian.C:2205
+
+Analyzing loop at PsociGAhamiltonian.C:2207
+
+Analyzing loop at PsociGAhamiltonian.C:2197
+
+
+Vectorizing loop at PsociGAhamiltonian.C:2197
+
+2197: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGAhamiltonian.C:2174
+
+Analyzing loop at PsociGAhamiltonian.C:2166
+
+
+Vectorizing loop at PsociGAhamiltonian.C:2166
+
+2166: LOOP VECTORIZED.
+PsociGAhamiltonian.C:2068: note: vectorized 3 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11725
+
+Analyzing loop at PsociGAhamiltonian.C:11770
+
+Analyzing loop at PsociGAhamiltonian.C:11749
+
+Analyzing loop at PsociGAhamiltonian.C:11750
+
+Analyzing loop at PsociGAhamiltonian.C:11725
+
+PsociGAhamiltonian.C:11710: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11637
+
+Analyzing loop at PsociGAhamiltonian.C:11683
+
+Analyzing loop at PsociGAhamiltonian.C:11661
+
+Analyzing loop at PsociGAhamiltonian.C:11663
+
+Analyzing loop at PsociGAhamiltonian.C:11637
+
+PsociGAhamiltonian.C:11619: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11683
+
+Analyzing loop at PsociGAhamiltonian.C:11661
+
+Analyzing loop at PsociGAhamiltonian.C:11663
+
+Analyzing loop at PsociGAhamiltonian.C:11637
+
+PsociGAhamiltonian.C:11619: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:6011
+
+Analyzing loop at PsociGAhamiltonian.C:6048
+
+Analyzing loop at PsociGAhamiltonian.C:6086
+
+Analyzing loop at PsociGAhamiltonian.C:6123
+
+
+Vectorizing loop at PsociGAhamiltonian.C:6123
+
+6123: created 5 versioning for alias checks.
+
+6123: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:6105
+
+Analyzing loop at PsociGAhamiltonian.C:8835
+
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+PsociGAhamiltonian.C:5888: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11420
+
+Analyzing loop at PsociGAhamiltonian.C:12096
+
+Analyzing loop at PsociGAhamiltonian.C:11398
+
+PsociGAhamiltonian.C:11387: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11358
+
+Analyzing loop at PsociGAhamiltonian.C:12096
+
+Analyzing loop at PsociGAhamiltonian.C:11336
+
+PsociGAhamiltonian.C:11325: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:5572
+
+Analyzing loop at PsociGAhamiltonian.C:5611
+
+Analyzing loop at PsociGAhamiltonian.C:5646
+
+Analyzing loop at PsociGAhamiltonian.C:5681
+
+
+Vectorizing loop at PsociGAhamiltonian.C:5681
+
+5681: created 5 versioning for alias checks.
+
+5681: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:5667
+
+Analyzing loop at PsociGAhamiltonian.C:8835
+
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+PsociGAhamiltonian.C:5468: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:5249
+
+Analyzing loop at PsociGAhamiltonian.C:5294
+
+Analyzing loop at PsociGAhamiltonian.C:5329
+
+Analyzing loop at PsociGAhamiltonian.C:5360
+
+
+Vectorizing loop at PsociGAhamiltonian.C:5360
+
+5360: created 5 versioning for alias checks.
+
+5360: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:5346
+
+Analyzing loop at PsociGAhamiltonian.C:8835
+
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+PsociGAhamiltonian.C:5135: note: vectorized 2 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11310
+
+PsociGAhamiltonian.C:11280: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:7158
+
+Analyzing loop at PsociGAhamiltonian.C:7171
+
+Analyzing loop at PsociGAhamiltonian.C:7220
+
+Analyzing loop at PsociGAhamiltonian.C:7248
+
+7248: not vectorized: not suitable for gather D.126295_224 = *D.149123_492;
+
+Analyzing loop at PsociGAhamiltonian.C:7235
+
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:8855
+
+
+Vectorizing loop at PsociGAhamiltonian.C:8855
+
+8855: LOOP VECTORIZED.
+PsociGAhamiltonian.C:7070: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:11877
+
+Analyzing loop at PsociGAhamiltonian.C:11907
+
+11907: not vectorized: not suitable for gather D.152666_160 = MEM[(struct vector *)D.152658_282];
+
+Analyzing loop at PsociGAhamiltonian.C:11890
+
+11890: not vectorized: not suitable for gather D.120698_99 = *D.152567_243;
+
+Analyzing loop at PsociGAhamiltonian.C:11868
+
+PsociGAhamiltonian.C:11837: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:6880
+
+Analyzing loop at PsociGAhamiltonian.C:6897
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGAhamiltonian.C:6954
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:793
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAhamiltonian.C:6790: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:6604
+
+Analyzing loop at PsociGAhamiltonian.C:6621
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGAhamiltonian.C:6677
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:793
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAhamiltonian.C:6514: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:8609
+
+Analyzing loop at PsociGAhamiltonian.C:8714
+
+PsociGAhamiltonian.C:8566: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:2574
+
+Analyzing loop at PsociGAhamiltonian.C:2604
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGAhamiltonian.C:2671
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAhamiltonian.C:2497: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:9207
+
+Analyzing loop at PsociGAhamiltonian.C:9216
+
+Analyzing loop at PsociGAhamiltonian.C:9219
+
+Analyzing loop at PsociGAhamiltonian.C:9222
+
+
+Vectorizing loop at PsociGAhamiltonian.C:9222
+
+9222: LOOP VECTORIZED.
+Analyzing loop at PsociGAhamiltonian.C:9198
+
+Analyzing loop at PsociGAhamiltonian.C:9192
+
+Analyzing loop at PsociGAhamiltonian.C:9238
+
+Analyzing loop at PsociGAhamiltonian.C:9241
+
+Analyzing loop at PsociGAhamiltonian.C:9244
+
+
+Vectorizing loop at PsociGAhamiltonian.C:9244
+
+9244: LOOP VECTORIZED.
+PsociGAhamiltonian.C:9160: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAhamiltonian.C:10296
+
+Analyzing loop at PsociGAhamiltonian.C:10357
+
+PsociGAhamiltonian.C:10257: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:70: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:70: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:70: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:324: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:324: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:324: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:324: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:161: note: vectorized 0 loops in function.
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociHamiltonian.C
+
+Analyzing loop at PsociHamiltonian.C:1288
+
+Analyzing loop at PsociHamiltonian.C:1289
+
+1289: not vectorized: loop contains function calls or data references that cannot be analyzed
+PsociHamiltonian.C:1275: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociHamiltonian.C:1172
+
+Analyzing loop at PsociHamiltonian.C:1195
+
+Analyzing loop at PsociHamiltonian.C:1250
+
+Analyzing loop at PsociHamiltonian.C:1255
+
+Analyzing loop at PsociHamiltonian.C:1220
+
+Analyzing loop at PsociHamiltonian.C:1208
+
+Analyzing loop at PsociHamiltonian.C:1184
+
+1184: not vectorized: data ref analysis failed *D.60036_295 = 1;
+
+Analyzing loop at PsociHamiltonian.C:1181
+
+1181: not vectorized: data ref analysis failed *D.60022_289 = 1;
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociHamiltonian.C:1126: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociHamiltonian.C:907
+
+Analyzing loop at PsociHamiltonian.C:930
+
+Analyzing loop at PsociHamiltonian.C:1022
+
+Analyzing loop at PsociHamiltonian.C:980
+
+Analyzing loop at PsociHamiltonian.C:982
+
+Analyzing loop at PsociHamiltonian.C:1022
+
+Analyzing loop at PsociHamiltonian.C:1008
+
+Analyzing loop at PsociHamiltonian.C:1013
+
+Analyzing loop at PsociHamiltonian.C:1074
+
+Analyzing loop at PsociHamiltonian.C:1066
+
+Analyzing loop at PsociHamiltonian.C:1099
+
+Analyzing loop at PsociHamiltonian.C:1104
+
+Analyzing loop at PsociHamiltonian.C:955
+
+Analyzing loop at PsociHamiltonian.C:943
+
+Analyzing loop at PsociHamiltonian.C:919
+
+919: not vectorized: data ref analysis failed *D.60403_645 = 1;
+
+Analyzing loop at PsociHamiltonian.C:916
+
+916: not vectorized: data ref analysis failed *D.60389_639 = 1;
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociHamiltonian.C:863: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociHamiltonian.C:751
+
+Analyzing loop at PsociHamiltonian.C:769
+
+Analyzing loop at PsociHamiltonian.C:806
+
+806: not vectorized: unsupported use in stmt.
+Analyzing loop at PsociHamiltonian.C:803
+
+803: not vectorized: unsupported use in stmt.
+Analyzing loop at PsociHamiltonian.C:823
+
+823: not vectorized: unsupported use in stmt.
+Analyzing loop at PsociHamiltonian.C:820
+
+820: not vectorized: unsupported use in stmt.
+Analyzing loop at PsociHamiltonian.C:844
+
+Analyzing loop at PsociHamiltonian.C:849
+
+Analyzing loop at PsociHamiltonian.C:783
+
+Analyzing loop at PsociHamiltonian.C:778
+
+Analyzing loop at PsociHamiltonian.C:764
+
+764: not vectorized: data ref analysis failed *D.61010_353 = 1;
+
+Analyzing loop at PsociHamiltonian.C:760
+
+760: not vectorized: data ref analysis failed *D.60996_347 = 1;
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociHamiltonian.C:712: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociHamiltonian.C:244
+
+PsociHamiltonian.C:190: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:530
+
+530: not vectorized: more than one data ref in stmt: *__result_85 = MEM[(const struct pair &)__last_87];
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:76
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:76
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociHamiltonian.C:1319
+
+PsociHamiltonian.C:1307: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociHamiltonian.C:365
+
+Analyzing loop at PsociHamiltonian.C:373
+
+Analyzing loop at PsociHamiltonian.C:327
+
+PsociHamiltonian.C:309: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociHamiltonian.C:1435
+
+Analyzing loop at PsociHamiltonian.C:1440
+
+
+Vectorizing loop at PsociHamiltonian.C:1440
+
+1440: created 2 versioning for alias checks.
+
+1440: LOOP VECTORIZED.
+Analyzing loop at PsociHamiltonian.C:1399
+
+Analyzing loop at PsociHamiltonian.C:1402
+
+1402: not vectorized: not suitable for gather temp_46 = *D.59122_144;
+
+PsociHamiltonian.C:1353: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociHamiltonian.C:1320
+
+PsociHamiltonian.C:1460: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociHamiltonian.C:671
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+Analyzing loop at PsociHamiltonian.C:654
+
+Analyzing loop at PsociHamiltonian.C:650
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociHamiltonian.C:637
+
+Analyzing loop at PsociHamiltonian.C:633
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociHamiltonian.C:575: note: vectorized 3 loops in function.
+
+Analyzing loop at PsociHamiltonian.C:500
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+Analyzing loop at PsociHamiltonian.C:483
+
+Analyzing loop at PsociHamiltonian.C:479
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at PsociHamiltonian.C:466
+
+Analyzing loop at PsociHamiltonian.C:462
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociHamiltonian.C:404: note: vectorized 3 loops in function.
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociIntegrals.C
+
+Analyzing loop at PsociIntegrals.C:907
+
+Analyzing loop at PsociIntegrals.C:905
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/basic_string.h:290
+
+PsociIntegrals.C:568: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociIntegrals.C:410
+
+Analyzing loop at PsociIntegrals.C:410
+
+Analyzing loop at PsociIntegrals.C:404
+
+Analyzing loop at PsociIntegrals.C:398
+
+Analyzing loop at PsociIntegrals.C:392
+
+Analyzing loop at PsociIntegrals.C:384
+
+Analyzing loop at PsociIntegrals.C:378
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/basic_string.h:290
+
+Analyzing loop at PsociIntegrals.C:366
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/basic_string.h:290
+
+PsociIntegrals.C:345: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociIntegrals.C:832
+
+Analyzing loop at PsociIntegrals.C:834
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/basic_string.h:290
+
+PsociIntegrals.C:789: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:161: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:531
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociIntegrals.C:1071
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociIntegrals.C:1093
+
+Analyzing loop at PsociIntegrals.C:1079
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociIntegrals.C:1016: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociIntegrals.C:475
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociIntegrals.C:507
+
+Analyzing loop at PsociIntegrals.C:522
+
+Analyzing loop at PsociIntegrals.C:483
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociIntegrals.C:426: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociIntegrals.C:733
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociIntegrals.C:751
+
+Analyzing loop at PsociIntegrals.C:741
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociIntegrals.C:623: note: vectorized 4 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:531
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:247
+
+Analyzing loop at PsociIntegrals.C:308
+
+Analyzing loop at PsociIntegrals.C:294
+
+Analyzing loop at PsociIntegrals.C:289
+
+Analyzing loop at PsociIntegrals.C:284
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/basic_string.h:183
+
+Analyzing loop at PsociIntegrals.C:270
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/basic_string.h:183
+
+Analyzing loop at PsociIntegrals.C:257
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/basic_string.h:183
+
+Analyzing loop at PsociIntegrals.C:250
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociIntegrals.C:184: note: vectorized 6 loops in function.
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociGADeterminants.C
+PsociGADeterminants.C: In member function 'void PsociGADeterminants::uploadNsefToGA(int, int)':
+PsociGADeterminants.C:1321:26: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+PsociGADeterminants.C: In member function 'long int PsociGADeterminants::generateDistributedDeterminantsSmallMemoryGA()':
+PsociGADeterminants.C:1654:15: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociGADeterminants.C:72: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:766
+
+PsociGADeterminants.C:744: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:1059
+
+Analyzing loop at PsociGADeterminants.C:1063
+
+
+Vectorizing loop at PsociGADeterminants.C:1063
+
+1063: created 1 versioning for alias checks.
+
+1063: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:1049
+
+Analyzing loop at PsociGADeterminants.C:1053
+
+
+Vectorizing loop at PsociGADeterminants.C:1053
+
+1053: created 1 versioning for alias checks.
+
+1053: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:1038
+
+Analyzing loop at PsociGADeterminants.C:1033
+
+
+Vectorizing loop at PsociGADeterminants.C:1033
+
+1033: created 1 versioning for alias checks.
+
+1033: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:1027
+
+
+Vectorizing loop at PsociGADeterminants.C:1027
+
+1027: created 1 versioning for alias checks.
+
+1027: LOOP VECTORIZED.
+PsociGADeterminants.C:999: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:1097
+
+Analyzing loop at PsociGADeterminants.C:1152
+
+Analyzing loop at PsociGADeterminants.C:1156
+
+
+Vectorizing loop at PsociGADeterminants.C:1156
+
+1156: created 1 versioning for alias checks.
+
+1156: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:1141
+
+Analyzing loop at PsociGADeterminants.C:1145
+
+
+Vectorizing loop at PsociGADeterminants.C:1145
+
+1145: created 1 versioning for alias checks.
+
+1145: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:1127
+
+Analyzing loop at PsociGADeterminants.C:1122
+
+
+Vectorizing loop at PsociGADeterminants.C:1122
+
+1122: created 1 versioning for alias checks.
+
+1122: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:1116
+
+
+Vectorizing loop at PsociGADeterminants.C:1116
+
+1116: created 1 versioning for alias checks.
+
+1116: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:766
+
+PsociGADeterminants.C:1086: note: vectorized 4 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociDeterminants.hpp:58: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2115
+
+Analyzing loop at PsociGADeterminants.C:2121
+
+2121: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2129
+
+2129: not vectorized: value used after loop.
+PsociGADeterminants.C:2109: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2145
+
+Analyzing loop at PsociGADeterminants.C:2151
+
+2151: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2159
+
+2159: not vectorized: value used after loop.
+PsociGADeterminants.C:2139: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2175
+
+Analyzing loop at PsociGADeterminants.C:2180
+
+2180: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2188
+
+2188: not vectorized: value used after loop.
+PsociGADeterminants.C:2170: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2205
+
+Analyzing loop at PsociGADeterminants.C:2212
+
+2212: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2220
+
+2220: not vectorized: value used after loop.
+PsociGADeterminants.C:2200: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2235
+
+Analyzing loop at PsociGADeterminants.C:2242
+
+2242: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2250
+
+2250: not vectorized: value used after loop.
+PsociGADeterminants.C:2230: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:1886
+
+Analyzing loop at PsociGADeterminants.C:1883
+
+PsociGADeterminants.C:1867: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociGADeterminants.C:1693: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:402
+
+Analyzing loop at PsociGADeterminants.C:494
+
+Analyzing loop at PsociGADeterminants.C:498
+
+
+Vectorizing loop at PsociGADeterminants.C:498
+
+498: created 1 versioning for alias checks.
+
+498: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:484
+
+Analyzing loop at PsociGADeterminants.C:488
+
+
+Vectorizing loop at PsociGADeterminants.C:488
+
+488: created 1 versioning for alias checks.
+
+488: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:478
+
+
+Vectorizing loop at PsociGADeterminants.C:478
+
+478: created 1 versioning for alias checks.
+
+478: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:473
+
+
+Vectorizing loop at PsociGADeterminants.C:473
+
+473: created 1 versioning for alias checks.
+
+473: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:468
+
+
+Vectorizing loop at PsociGADeterminants.C:468
+
+468: created 1 versioning for alias checks.
+
+468: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:463
+
+
+Vectorizing loop at PsociGADeterminants.C:463
+
+463: created 1 versioning for alias checks.
+
+463: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:457
+
+457: not vectorized: data ref analysis failed *D.65422_483 = 1;
+
+Analyzing loop at PsociGADeterminants.C:451
+
+451: not vectorized: data ref analysis failed *D.65369_466 = 2;
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGADeterminants.C:382: note: vectorized 8 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGADeterminants.C:1521
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociGADeterminants.C:1467: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2205
+
+Analyzing loop at PsociGADeterminants.C:2212
+
+2212: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2220
+
+2220: not vectorized: value used after loop.
+Analyzing loop at PsociGADeterminants.C:2732
+
+2732: not vectorized: data ref analysis failed *D.64869_101 = D.54447_37;
+
+Analyzing loop at PsociGADeterminants.C:2728
+
+2728: not vectorized: data ref analysis failed *D.64815_83 = D.54432_45;
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGADeterminants.C:2719: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2175
+
+Analyzing loop at PsociGADeterminants.C:2180
+
+2180: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2188
+
+2188: not vectorized: value used after loop.
+Analyzing loop at PsociGADeterminants.C:2752
+
+2752: not vectorized: data ref analysis failed *D.64710_101 = D.54293_37;
+
+Analyzing loop at PsociGADeterminants.C:2748
+
+2748: not vectorized: data ref analysis failed *D.64656_83 = D.54278_45;
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGADeterminants.C:2739: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2479
+
+Analyzing loop at PsociGADeterminants.C:2205
+
+Analyzing loop at PsociGADeterminants.C:2212
+
+2212: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2220
+
+2220: not vectorized: value used after loop.
+PsociGADeterminants.C:2454: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2388
+
+Analyzing loop at PsociGADeterminants.C:2235
+
+Analyzing loop at PsociGADeterminants.C:2242
+
+2242: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2250
+
+2250: not vectorized: value used after loop.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGADeterminants.C:2370: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2350
+
+Analyzing loop at PsociGADeterminants.C:2235
+
+Analyzing loop at PsociGADeterminants.C:2242
+
+2242: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2250
+
+2250: not vectorized: value used after loop.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGADeterminants.C:2319: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2601
+
+Analyzing loop at PsociGADeterminants.C:2175
+
+Analyzing loop at PsociGADeterminants.C:2180
+
+2180: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2188
+
+2188: not vectorized: value used after loop.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGADeterminants.C:2583: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2302
+
+Analyzing loop at PsociGADeterminants.C:2205
+
+Analyzing loop at PsociGADeterminants.C:2212
+
+2212: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2220
+
+2220: not vectorized: value used after loop.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGADeterminants.C:2265: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2703
+
+PsociGADeterminants.C:2697: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2689
+
+PsociGADeterminants.C:2679: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2525
+
+Analyzing loop at PsociGADeterminants.C:2175
+
+Analyzing loop at PsociGADeterminants.C:2180
+
+2180: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2188
+
+2188: not vectorized: value used after loop.
+PsociGADeterminants.C:2504: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2431
+
+Analyzing loop at PsociGADeterminants.C:2205
+
+Analyzing loop at PsociGADeterminants.C:2212
+
+2212: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2220
+
+2220: not vectorized: value used after loop.
+PsociGADeterminants.C:2410: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2557
+
+Analyzing loop at PsociGADeterminants.C:2175
+
+Analyzing loop at PsociGADeterminants.C:2180
+
+2180: not vectorized: unsupported data-type
+Analyzing loop at PsociGADeterminants.C:2188
+
+2188: not vectorized: value used after loop.
+PsociGADeterminants.C:2541: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:530
+
+530: not vectorized: more than one data ref in stmt: *__result_85 = MEM[(const struct pair &)__last_87];
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:76
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:76
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2641
+
+Analyzing loop at PsociGADeterminants.C:2662
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGADeterminants.C:2620: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:2661
+
+PsociGADeterminants.C:2658: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:712
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGADeterminants.C:668: note: vectorized 1 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociGADeterminants.C:1569: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+PsociDeterminants.hpp:58: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:161: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:182: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:530
+
+530: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:527: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:70: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:70: note: vectorized 0 loops in function.
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:530
+
+530: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:527: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:676
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:676
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:1192
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+Analyzing loop at PsociGADeterminants.C:1261
+
+Analyzing loop at PsociGADeterminants.C:1265
+
+
+Vectorizing loop at PsociGADeterminants.C:1265
+
+1265: created 1 versioning for alias checks.
+
+1265: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:1249
+
+Analyzing loop at PsociGADeterminants.C:1253
+
+
+Vectorizing loop at PsociGADeterminants.C:1253
+
+1253: created 1 versioning for alias checks.
+
+1253: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGADeterminants.C:1231
+
+Analyzing loop at PsociGADeterminants.C:1219
+
+
+Vectorizing loop at PsociGADeterminants.C:1219
+
+1219: created 1 versioning for alias checks.
+
+1219: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:1212
+
+
+Vectorizing loop at PsociGADeterminants.C:1212
+
+1212: created 1 versioning for alias checks.
+
+1212: LOOP VECTORIZED.
+PsociGADeterminants.C:1181: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:1827
+
+PsociGADeterminants.C:1784: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGADeterminants.C:1429
+
+PsociGADeterminants.C:1379: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGADeterminants.C:1900: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGADeterminants.C:963
+
+Analyzing loop at PsociGADeterminants.C:968
+
+
+Vectorizing loop at PsociGADeterminants.C:968
+
+968: created 1 versioning for alias checks.
+
+968: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:950
+
+Analyzing loop at PsociGADeterminants.C:955
+
+
+Vectorizing loop at PsociGADeterminants.C:955
+
+955: created 1 versioning for alias checks.
+
+955: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:882
+
+Analyzing loop at PsociGADeterminants.C:870
+
+
+Vectorizing loop at PsociGADeterminants.C:870
+
+870: created 1 versioning for alias checks.
+
+870: LOOP VECTORIZED.
+Analyzing loop at PsociGADeterminants.C:863
+
+
+Vectorizing loop at PsociGADeterminants.C:863
+
+863: created 1 versioning for alias checks.
+
+863: LOOP VECTORIZED.
+PsociGADeterminants.C:828: note: vectorized 4 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGADeterminants.C:2071: note: vectorized 1 loops in function.
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociDeterminants.C
+
+Analyzing loop at PsociDeterminants.C:1316
+
+Analyzing loop at PsociDeterminants.C:1305
+
+Analyzing loop at PsociDeterminants.C:1294
+
+Analyzing loop at PsociDeterminants.C:1280
+
+Analyzing loop at PsociDeterminants.C:1282
+
+Analyzing loop at PsociDeterminants.C:1260
+
+Analyzing loop at PsociDeterminants.C:1262
+
+Analyzing loop at PsociDeterminants.C:1247
+
+Analyzing loop at PsociDeterminants.C:1243
+
+PsociDeterminants.C:1222: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:292: note: vectorized 1 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1076: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociDeterminants.C:109: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:77
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:70: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociDeterminants.C:1341
+
+Analyzing loop at PsociDeterminants.C:1435
+
+Analyzing loop at PsociDeterminants.C:1424
+
+Analyzing loop at PsociDeterminants.C:1413
+
+Analyzing loop at PsociDeterminants.C:1398
+
+Analyzing loop at PsociDeterminants.C:1401
+
+Analyzing loop at PsociDeterminants.C:1378
+
+Analyzing loop at PsociDeterminants.C:1381
+
+Analyzing loop at PsociDeterminants.C:1366
+
+Analyzing loop at PsociDeterminants.C:1362
+
+PsociDeterminants.C:1332: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:70: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1282
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1272: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1473
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1470: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociDeterminants.hpp:58
+
+Analyzing loop at PsociDeterminants.C:803
+
+PsociDeterminants.C:748: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociDeterminants.C:4435
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_iterator.h:741
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:298
+
+Analyzing loop at PsociDeterminants.C:4407
+
+Analyzing loop at PsociDeterminants.C:4414
+
+4414: not vectorized: unsupported use in stmt.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_iterator.h:741
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:298
+
+Analyzing loop at PsociDeterminants.C:4378
+
+Analyzing loop at PsociDeterminants.C:4385
+
+4385: not vectorized: unsupported use in stmt.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociDeterminants.C:4339: note: vectorized 2 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:182: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:324: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:327
+
+327: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:324: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociDeterminants.C:2803
+
+Analyzing loop at PsociDeterminants.C:2799
+
+PsociDeterminants.C:2764: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociDeterminants.C:2751
+
+
+Vectorizing loop at PsociDeterminants.C:2751
+
+2751: created 1 versioning for alias checks.
+
+2751: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2745
+
+
+Vectorizing loop at PsociDeterminants.C:2745
+
+2745: created 1 versioning for alias checks.
+
+2745: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2742
+
+
+Vectorizing loop at PsociDeterminants.C:2742
+
+2742: created 1 versioning for alias checks.
+
+2742: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2729
+
+Analyzing loop at PsociDeterminants.C:2732
+
+
+Vectorizing loop at PsociDeterminants.C:2732
+
+2732: created 1 versioning for alias checks.
+
+2732: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2688
+
+Analyzing loop at PsociDeterminants.C:2690
+
+Analyzing loop at PsociDeterminants.C:2692
+
+Analyzing loop at PsociDeterminants.C:2694
+
+Analyzing loop at PsociDeterminants.C:2696
+
+Analyzing loop at PsociDeterminants.C:2698
+
+Analyzing loop at PsociDeterminants.C:2700
+
+Analyzing loop at PsociDeterminants.C:2702
+
+Analyzing loop at PsociDeterminants.C:2704
+
+Analyzing loop at PsociDeterminants.C:2706
+
+Analyzing loop at PsociDeterminants.C:2710
+
+
+Vectorizing loop at PsociDeterminants.C:2710
+
+2710: created 1 versioning for alias checks.
+
+2710: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2670
+
+Analyzing loop at PsociDeterminants.C:2672
+
+Analyzing loop at PsociDeterminants.C:2675
+
+
+Vectorizing loop at PsociDeterminants.C:2675
+
+2675: created 1 versioning for alias checks.
+
+2675: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2633
+
+Analyzing loop at PsociDeterminants.C:2635
+
+Analyzing loop at PsociDeterminants.C:2637
+
+Analyzing loop at PsociDeterminants.C:2639
+
+Analyzing loop at PsociDeterminants.C:2641
+
+Analyzing loop at PsociDeterminants.C:2643
+
+Analyzing loop at PsociDeterminants.C:2645
+
+Analyzing loop at PsociDeterminants.C:2647
+
+Analyzing loop at PsociDeterminants.C:2649
+
+Analyzing loop at PsociDeterminants.C:2653
+
+
+Vectorizing loop at PsociDeterminants.C:2653
+
+2653: created 1 versioning for alias checks.
+
+2653: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2611
+
+Analyzing loop at PsociDeterminants.C:2614
+
+Analyzing loop at PsociDeterminants.C:2616
+
+Analyzing loop at PsociDeterminants.C:2619
+
+
+Vectorizing loop at PsociDeterminants.C:2619
+
+2619: created 1 versioning for alias checks.
+
+2619: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2576
+
+Analyzing loop at PsociDeterminants.C:2579
+
+Analyzing loop at PsociDeterminants.C:2581
+
+Analyzing loop at PsociDeterminants.C:2583
+
+Analyzing loop at PsociDeterminants.C:2585
+
+Analyzing loop at PsociDeterminants.C:2587
+
+Analyzing loop at PsociDeterminants.C:2589
+
+Analyzing loop at PsociDeterminants.C:2591
+
+Analyzing loop at PsociDeterminants.C:2595
+
+
+Vectorizing loop at PsociDeterminants.C:2595
+
+2595: created 1 versioning for alias checks.
+
+2595: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2552
+
+Analyzing loop at PsociDeterminants.C:2555
+
+Analyzing loop at PsociDeterminants.C:2557
+
+Analyzing loop at PsociDeterminants.C:2559
+
+Analyzing loop at PsociDeterminants.C:2562
+
+
+Vectorizing loop at PsociDeterminants.C:2562
+
+2562: created 1 versioning for alias checks.
+
+2562: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2520
+
+Analyzing loop at PsociDeterminants.C:2522
+
+Analyzing loop at PsociDeterminants.C:2524
+
+Analyzing loop at PsociDeterminants.C:2526
+
+Analyzing loop at PsociDeterminants.C:2528
+
+Analyzing loop at PsociDeterminants.C:2530
+
+Analyzing loop at PsociDeterminants.C:2532
+
+Analyzing loop at PsociDeterminants.C:2536
+
+
+Vectorizing loop at PsociDeterminants.C:2536
+
+2536: created 1 versioning for alias checks.
+
+2536: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2494
+
+Analyzing loop at PsociDeterminants.C:2496
+
+Analyzing loop at PsociDeterminants.C:2498
+
+Analyzing loop at PsociDeterminants.C:2500
+
+Analyzing loop at PsociDeterminants.C:2502
+
+Analyzing loop at PsociDeterminants.C:2505
+
+
+Vectorizing loop at PsociDeterminants.C:2505
+
+2505: created 1 versioning for alias checks.
+
+2505: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2465
+
+Analyzing loop at PsociDeterminants.C:2467
+
+Analyzing loop at PsociDeterminants.C:2469
+
+Analyzing loop at PsociDeterminants.C:2471
+
+Analyzing loop at PsociDeterminants.C:2473
+
+Analyzing loop at PsociDeterminants.C:2475
+
+Analyzing loop at PsociDeterminants.C:2480
+
+
+Vectorizing loop at PsociDeterminants.C:2480
+
+2480: created 1 versioning for alias checks.
+
+2480: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:2429: note: vectorized 13 loops in function.
+
+Analyzing loop at PsociDeterminants.C:2417
+
+
+Vectorizing loop at PsociDeterminants.C:2417
+
+2417: created 1 versioning for alias checks.
+
+2417: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2411
+
+
+Vectorizing loop at PsociDeterminants.C:2411
+
+2411: created 1 versioning for alias checks.
+
+2411: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2408
+
+
+Vectorizing loop at PsociDeterminants.C:2408
+
+2408: created 1 versioning for alias checks.
+
+2408: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2395
+
+Analyzing loop at PsociDeterminants.C:2398
+
+
+Vectorizing loop at PsociDeterminants.C:2398
+
+2398: created 1 versioning for alias checks.
+
+2398: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2361
+
+Analyzing loop at PsociDeterminants.C:2363
+
+Analyzing loop at PsociDeterminants.C:2365
+
+Analyzing loop at PsociDeterminants.C:2367
+
+Analyzing loop at PsociDeterminants.C:2369
+
+Analyzing loop at PsociDeterminants.C:2371
+
+Analyzing loop at PsociDeterminants.C:2373
+
+Analyzing loop at PsociDeterminants.C:2375
+
+Analyzing loop at PsociDeterminants.C:2379
+
+
+Vectorizing loop at PsociDeterminants.C:2379
+
+2379: created 1 versioning for alias checks.
+
+2379: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2344
+
+Analyzing loop at PsociDeterminants.C:2346
+
+Analyzing loop at PsociDeterminants.C:2349
+
+
+Vectorizing loop at PsociDeterminants.C:2349
+
+2349: created 1 versioning for alias checks.
+
+2349: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2313
+
+Analyzing loop at PsociDeterminants.C:2315
+
+Analyzing loop at PsociDeterminants.C:2317
+
+Analyzing loop at PsociDeterminants.C:2319
+
+Analyzing loop at PsociDeterminants.C:2321
+
+Analyzing loop at PsociDeterminants.C:2323
+
+Analyzing loop at PsociDeterminants.C:2325
+
+Analyzing loop at PsociDeterminants.C:2329
+
+
+Vectorizing loop at PsociDeterminants.C:2329
+
+2329: created 1 versioning for alias checks.
+
+2329: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2293
+
+Analyzing loop at PsociDeterminants.C:2295
+
+Analyzing loop at PsociDeterminants.C:2297
+
+Analyzing loop at PsociDeterminants.C:2300
+
+
+Vectorizing loop at PsociDeterminants.C:2300
+
+2300: created 1 versioning for alias checks.
+
+2300: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2264
+
+Analyzing loop at PsociDeterminants.C:2266
+
+Analyzing loop at PsociDeterminants.C:2268
+
+Analyzing loop at PsociDeterminants.C:2270
+
+Analyzing loop at PsociDeterminants.C:2272
+
+Analyzing loop at PsociDeterminants.C:2274
+
+Analyzing loop at PsociDeterminants.C:2278
+
+
+Vectorizing loop at PsociDeterminants.C:2278
+
+2278: created 1 versioning for alias checks.
+
+2278: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2241
+
+Analyzing loop at PsociDeterminants.C:2243
+
+Analyzing loop at PsociDeterminants.C:2245
+
+Analyzing loop at PsociDeterminants.C:2247
+
+Analyzing loop at PsociDeterminants.C:2250
+
+
+Vectorizing loop at PsociDeterminants.C:2250
+
+2250: created 1 versioning for alias checks.
+
+2250: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2215
+
+Analyzing loop at PsociDeterminants.C:2217
+
+Analyzing loop at PsociDeterminants.C:2219
+
+Analyzing loop at PsociDeterminants.C:2221
+
+Analyzing loop at PsociDeterminants.C:2223
+
+Analyzing loop at PsociDeterminants.C:2228
+
+
+Vectorizing loop at PsociDeterminants.C:2228
+
+2228: created 1 versioning for alias checks.
+
+2228: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:2179: note: vectorized 11 loops in function.
+
+Analyzing loop at PsociDeterminants.C:2167
+
+
+Vectorizing loop at PsociDeterminants.C:2167
+
+2167: created 1 versioning for alias checks.
+
+2167: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2161
+
+
+Vectorizing loop at PsociDeterminants.C:2161
+
+2161: created 1 versioning for alias checks.
+
+2161: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2158
+
+
+Vectorizing loop at PsociDeterminants.C:2158
+
+2158: created 1 versioning for alias checks.
+
+2158: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2145
+
+Analyzing loop at PsociDeterminants.C:2148
+
+
+Vectorizing loop at PsociDeterminants.C:2148
+
+2148: created 1 versioning for alias checks.
+
+2148: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2117
+
+Analyzing loop at PsociDeterminants.C:2119
+
+Analyzing loop at PsociDeterminants.C:2121
+
+Analyzing loop at PsociDeterminants.C:2123
+
+Analyzing loop at PsociDeterminants.C:2125
+
+Analyzing loop at PsociDeterminants.C:2127
+
+Analyzing loop at PsociDeterminants.C:2131
+
+
+Vectorizing loop at PsociDeterminants.C:2131
+
+2131: created 1 versioning for alias checks.
+
+2131: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2100
+
+Analyzing loop at PsociDeterminants.C:2102
+
+Analyzing loop at PsociDeterminants.C:2105
+
+
+Vectorizing loop at PsociDeterminants.C:2105
+
+2105: created 1 versioning for alias checks.
+
+2105: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2074
+
+Analyzing loop at PsociDeterminants.C:2076
+
+Analyzing loop at PsociDeterminants.C:2078
+
+Analyzing loop at PsociDeterminants.C:2080
+
+Analyzing loop at PsociDeterminants.C:2082
+
+Analyzing loop at PsociDeterminants.C:2086
+
+
+Vectorizing loop at PsociDeterminants.C:2086
+
+2086: created 1 versioning for alias checks.
+
+2086: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2054
+
+Analyzing loop at PsociDeterminants.C:2056
+
+Analyzing loop at PsociDeterminants.C:2058
+
+Analyzing loop at PsociDeterminants.C:2061
+
+
+Vectorizing loop at PsociDeterminants.C:2061
+
+2061: created 1 versioning for alias checks.
+
+2061: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2031
+
+Analyzing loop at PsociDeterminants.C:2033
+
+Analyzing loop at PsociDeterminants.C:2035
+
+Analyzing loop at PsociDeterminants.C:2037
+
+Analyzing loop at PsociDeterminants.C:2042
+
+
+Vectorizing loop at PsociDeterminants.C:2042
+
+2042: created 1 versioning for alias checks.
+
+2042: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:1995: note: vectorized 9 loops in function.
+
+Analyzing loop at PsociDeterminants.C:1983
+
+
+Vectorizing loop at PsociDeterminants.C:1983
+
+1983: created 1 versioning for alias checks.
+
+1983: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:1977
+
+
+Vectorizing loop at PsociDeterminants.C:1977
+
+1977: created 1 versioning for alias checks.
+
+1977: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:1974
+
+
+Vectorizing loop at PsociDeterminants.C:1974
+
+1974: created 1 versioning for alias checks.
+
+1974: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:1960
+
+Analyzing loop at PsociDeterminants.C:1963
+
+
+Vectorizing loop at PsociDeterminants.C:1963
+
+1963: created 1 versioning for alias checks.
+
+1963: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:1938
+
+Analyzing loop at PsociDeterminants.C:1940
+
+Analyzing loop at PsociDeterminants.C:1942
+
+Analyzing loop at PsociDeterminants.C:1944
+
+Analyzing loop at PsociDeterminants.C:1948
+
+
+Vectorizing loop at PsociDeterminants.C:1948
+
+1948: created 1 versioning for alias checks.
+
+1948: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:1921
+
+Analyzing loop at PsociDeterminants.C:1923
+
+Analyzing loop at PsociDeterminants.C:1926
+
+
+Vectorizing loop at PsociDeterminants.C:1926
+
+1926: created 1 versioning for alias checks.
+
+1926: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:1901
+
+Analyzing loop at PsociDeterminants.C:1903
+
+Analyzing loop at PsociDeterminants.C:1905
+
+Analyzing loop at PsociDeterminants.C:1910
+
+
+Vectorizing loop at PsociDeterminants.C:1910
+
+1910: created 1 versioning for alias checks.
+
+1910: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:1844: note: vectorized 7 loops in function.
+
+Analyzing loop at PsociDeterminants.C:1830
+
+
+Vectorizing loop at PsociDeterminants.C:1830
+
+1830: created 1 versioning for alias checks.
+
+1830: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:1825
+
+1825: not vectorized: iteration count too small.
+Analyzing loop at PsociDeterminants.C:1821
+
+
+Vectorizing loop at PsociDeterminants.C:1821
+
+1821: created 1 versioning for alias checks.
+
+1821: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:1808
+
+Analyzing loop at PsociDeterminants.C:1811
+
+
+Vectorizing loop at PsociDeterminants.C:1811
+
+1811: created 1 versioning for alias checks.
+
+1811: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:1792
+
+Analyzing loop at PsociDeterminants.C:1794
+
+Analyzing loop at PsociDeterminants.C:1798
+
+
+Vectorizing loop at PsociDeterminants.C:1798
+
+1798: created 1 versioning for alias checks.
+
+1798: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:1733: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociDeterminants.C:1718
+
+
+Vectorizing loop at PsociDeterminants.C:1718
+
+1718: created 1 versioning for alias checks.
+
+1718: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:1712
+
+
+Vectorizing loop at PsociDeterminants.C:1712
+
+1712: created 1 versioning for alias checks.
+
+1712: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:1664: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociDeterminants.C:2959
+
+
+Vectorizing loop at PsociDeterminants.C:2959
+
+2959: created 3 versioning for alias checks.
+
+2959: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:2951
+
+
+Vectorizing loop at PsociDeterminants.C:2951
+
+2951: created 3 versioning for alias checks.
+
+2951: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:2894: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociDeterminants.C:4319
+
+
+Vectorizing loop at PsociDeterminants.C:4319
+
+4319: created 3 versioning for alias checks.
+
+4319: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:4312
+
+
+Vectorizing loop at PsociDeterminants.C:4312
+
+4312: created 1 versioning for alias checks.
+
+4312: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:4308
+
+
+Vectorizing loop at PsociDeterminants.C:4308
+
+4308: created 3 versioning for alias checks.
+
+4308: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:4287
+
+Analyzing loop at PsociDeterminants.C:4289
+
+Analyzing loop at PsociDeterminants.C:4293
+
+
+Vectorizing loop at PsociDeterminants.C:4293
+
+4293: created 3 versioning for alias checks.
+
+4293: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:4248
+
+Analyzing loop at PsociDeterminants.C:4250
+
+Analyzing loop at PsociDeterminants.C:4252
+
+Analyzing loop at PsociDeterminants.C:4254
+
+Analyzing loop at PsociDeterminants.C:4256
+
+Analyzing loop at PsociDeterminants.C:4258
+
+Analyzing loop at PsociDeterminants.C:4260
+
+Analyzing loop at PsociDeterminants.C:4262
+
+Analyzing loop at PsociDeterminants.C:4269
+
+
+Vectorizing loop at PsociDeterminants.C:4269
+
+4269: created 3 versioning for alias checks.
+
+4269: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:4221
+
+Analyzing loop at PsociDeterminants.C:4223
+
+Analyzing loop at PsociDeterminants.C:4225
+
+Analyzing loop at PsociDeterminants.C:4227
+
+Analyzing loop at PsociDeterminants.C:4232
+
+
+Vectorizing loop at PsociDeterminants.C:4232
+
+4232: created 3 versioning for alias checks.
+
+4232: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:4189
+
+Analyzing loop at PsociDeterminants.C:4191
+
+Analyzing loop at PsociDeterminants.C:4193
+
+Analyzing loop at PsociDeterminants.C:4195
+
+Analyzing loop at PsociDeterminants.C:4197
+
+Analyzing loop at PsociDeterminants.C:4199
+
+Analyzing loop at PsociDeterminants.C:4205
+
+
+Vectorizing loop at PsociDeterminants.C:4205
+
+4205: created 3 versioning for alias checks.
+
+4205: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:4144: note: vectorized 7 loops in function.
+
+Analyzing loop at PsociDeterminants.C:4126
+
+Analyzing loop at PsociDeterminants.C:4129
+
+
+Vectorizing loop at PsociDeterminants.C:4129
+
+4129: created 3 versioning for alias checks.
+
+4129: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:4090
+
+Analyzing loop at PsociDeterminants.C:4092
+
+Analyzing loop at PsociDeterminants.C:4094
+
+Analyzing loop at PsociDeterminants.C:4096
+
+Analyzing loop at PsociDeterminants.C:4098
+
+Analyzing loop at PsociDeterminants.C:4100
+
+Analyzing loop at PsociDeterminants.C:4102
+
+Analyzing loop at PsociDeterminants.C:4109
+
+
+Vectorizing loop at PsociDeterminants.C:4109
+
+4109: created 3 versioning for alias checks.
+
+4109: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:4066
+
+Analyzing loop at PsociDeterminants.C:4068
+
+Analyzing loop at PsociDeterminants.C:4070
+
+Analyzing loop at PsociDeterminants.C:4075
+
+
+Vectorizing loop at PsociDeterminants.C:4075
+
+4075: created 3 versioning for alias checks.
+
+4075: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:4037
+
+Analyzing loop at PsociDeterminants.C:4039
+
+Analyzing loop at PsociDeterminants.C:4041
+
+Analyzing loop at PsociDeterminants.C:4043
+
+Analyzing loop at PsociDeterminants.C:4045
+
+Analyzing loop at PsociDeterminants.C:4051
+
+
+Vectorizing loop at PsociDeterminants.C:4051
+
+4051: created 3 versioning for alias checks.
+
+4051: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:3995: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociDeterminants.C:3982
+
+
+Vectorizing loop at PsociDeterminants.C:3982
+
+3982: created 3 versioning for alias checks.
+
+3982: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3974
+
+
+Vectorizing loop at PsociDeterminants.C:3974
+
+3974: created 1 versioning for alias checks.
+
+3974: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3970
+
+
+Vectorizing loop at PsociDeterminants.C:3970
+
+3970: created 3 versioning for alias checks.
+
+3970: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3948
+
+Analyzing loop at PsociDeterminants.C:3950
+
+Analyzing loop at PsociDeterminants.C:3955
+
+
+Vectorizing loop at PsociDeterminants.C:3955
+
+3955: created 3 versioning for alias checks.
+
+3955: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3922
+
+Analyzing loop at PsociDeterminants.C:3924
+
+Analyzing loop at PsociDeterminants.C:3926
+
+Analyzing loop at PsociDeterminants.C:3928
+
+Analyzing loop at PsociDeterminants.C:3934
+
+
+Vectorizing loop at PsociDeterminants.C:3934
+
+3934: created 3 versioning for alias checks.
+
+3934: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:3843: note: vectorized 5 loops in function.
+
+Analyzing loop at PsociDeterminants.C:3825
+
+Analyzing loop at PsociDeterminants.C:3828
+
+
+Vectorizing loop at PsociDeterminants.C:3828
+
+3828: created 3 versioning for alias checks.
+
+3828: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3802
+
+Analyzing loop at PsociDeterminants.C:3804
+
+Analyzing loop at PsociDeterminants.C:3806
+
+Analyzing loop at PsociDeterminants.C:3812
+
+
+Vectorizing loop at PsociDeterminants.C:3812
+
+3812: created 3 versioning for alias checks.
+
+3812: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:3752: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociDeterminants.C:3739
+
+
+Vectorizing loop at PsociDeterminants.C:3739
+
+3739: created 3 versioning for alias checks.
+
+3739: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3735
+
+
+Vectorizing loop at PsociDeterminants.C:3735
+
+3735: created 3 versioning for alias checks.
+
+3735: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:3679: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociDeterminants.C:3668
+
+
+Vectorizing loop at PsociDeterminants.C:3668
+
+3668: created 3 versioning for alias checks.
+
+3668: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:3618: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociDeterminants.C:3585
+
+Analyzing loop at PsociDeterminants.C:3590
+
+
+Vectorizing loop at PsociDeterminants.C:3590
+
+3590: created 3 versioning for alias checks.
+
+3590: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3542
+
+Analyzing loop at PsociDeterminants.C:3544
+
+Analyzing loop at PsociDeterminants.C:3546
+
+Analyzing loop at PsociDeterminants.C:3548
+
+Analyzing loop at PsociDeterminants.C:3550
+
+Analyzing loop at PsociDeterminants.C:3552
+
+Analyzing loop at PsociDeterminants.C:3554
+
+Analyzing loop at PsociDeterminants.C:3556
+
+Analyzing loop at PsociDeterminants.C:3558
+
+Analyzing loop at PsociDeterminants.C:3566
+
+
+Vectorizing loop at PsociDeterminants.C:3566
+
+3566: created 3 versioning for alias checks.
+
+3566: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3518
+
+Analyzing loop at PsociDeterminants.C:3520
+
+Analyzing loop at PsociDeterminants.C:3522
+
+Analyzing loop at PsociDeterminants.C:3527
+
+
+Vectorizing loop at PsociDeterminants.C:3527
+
+3527: created 3 versioning for alias checks.
+
+3527: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3481
+
+Analyzing loop at PsociDeterminants.C:3483
+
+Analyzing loop at PsociDeterminants.C:3485
+
+Analyzing loop at PsociDeterminants.C:3487
+
+Analyzing loop at PsociDeterminants.C:3489
+
+Analyzing loop at PsociDeterminants.C:3491
+
+Analyzing loop at PsociDeterminants.C:3493
+
+Analyzing loop at PsociDeterminants.C:3501
+
+
+Vectorizing loop at PsociDeterminants.C:3501
+
+3501: created 3 versioning for alias checks.
+
+3501: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3447
+
+Analyzing loop at PsociDeterminants.C:3449
+
+Analyzing loop at PsociDeterminants.C:3451
+
+Analyzing loop at PsociDeterminants.C:3453
+
+Analyzing loop at PsociDeterminants.C:3455
+
+Analyzing loop at PsociDeterminants.C:3464
+
+
+Vectorizing loop at PsociDeterminants.C:3464
+
+3464: created 3 versioning for alias checks.
+
+3464: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:3400: note: vectorized 5 loops in function.
+
+Analyzing loop at PsociDeterminants.C:3386
+
+
+Vectorizing loop at PsociDeterminants.C:3386
+
+3386: created 3 versioning for alias checks.
+
+3386: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3377
+
+
+Vectorizing loop at PsociDeterminants.C:3377
+
+3377: created 3 versioning for alias checks.
+
+3377: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3371
+
+
+Vectorizing loop at PsociDeterminants.C:3371
+
+3371: created 1 versioning for alias checks.
+
+3371: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3351
+
+Analyzing loop at PsociDeterminants.C:3353
+
+Analyzing loop at PsociDeterminants.C:3358
+
+
+Vectorizing loop at PsociDeterminants.C:3358
+
+3358: created 3 versioning for alias checks.
+
+3358: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3318
+
+Analyzing loop at PsociDeterminants.C:3320
+
+Analyzing loop at PsociDeterminants.C:3322
+
+Analyzing loop at PsociDeterminants.C:3324
+
+Analyzing loop at PsociDeterminants.C:3326
+
+Analyzing loop at PsociDeterminants.C:3328
+
+Analyzing loop at PsociDeterminants.C:3335
+
+
+Vectorizing loop at PsociDeterminants.C:3335
+
+3335: created 3 versioning for alias checks.
+
+3335: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3286
+
+Analyzing loop at PsociDeterminants.C:3288
+
+Analyzing loop at PsociDeterminants.C:3290
+
+Analyzing loop at PsociDeterminants.C:3292
+
+Analyzing loop at PsociDeterminants.C:3301
+
+
+Vectorizing loop at PsociDeterminants.C:3301
+
+3301: created 3 versioning for alias checks.
+
+3301: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:3239: note: vectorized 6 loops in function.
+
+Analyzing loop at PsociDeterminants.C:3218
+
+Analyzing loop at PsociDeterminants.C:3223
+
+
+Vectorizing loop at PsociDeterminants.C:3223
+
+3223: created 3 versioning for alias checks.
+
+3223: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3188
+
+Analyzing loop at PsociDeterminants.C:3190
+
+Analyzing loop at PsociDeterminants.C:3192
+
+Analyzing loop at PsociDeterminants.C:3194
+
+Analyzing loop at PsociDeterminants.C:3196
+
+Analyzing loop at PsociDeterminants.C:3203
+
+
+Vectorizing loop at PsociDeterminants.C:3203
+
+3203: created 3 versioning for alias checks.
+
+3203: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3160
+
+Analyzing loop at PsociDeterminants.C:3162
+
+Analyzing loop at PsociDeterminants.C:3164
+
+Analyzing loop at PsociDeterminants.C:3173
+
+
+Vectorizing loop at PsociDeterminants.C:3173
+
+3173: created 3 versioning for alias checks.
+
+3173: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:3080: note: vectorized 3 loops in function.
+
+Analyzing loop at PsociDeterminants.C:3067
+
+
+Vectorizing loop at PsociDeterminants.C:3067
+
+3067: created 3 versioning for alias checks.
+
+3067: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3060
+
+
+Vectorizing loop at PsociDeterminants.C:3060
+
+3060: created 1 versioning for alias checks.
+
+3060: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3056
+
+
+Vectorizing loop at PsociDeterminants.C:3056
+
+3056: created 3 versioning for alias checks.
+
+3056: LOOP VECTORIZED.
+Analyzing loop at PsociDeterminants.C:3030
+
+Analyzing loop at PsociDeterminants.C:3032
+
+Analyzing loop at PsociDeterminants.C:3041
+
+
+Vectorizing loop at PsociDeterminants.C:3041
+
+3041: created 3 versioning for alias checks.
+
+3041: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:2972: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociDeterminants.C:2882
+
+
+Vectorizing loop at PsociDeterminants.C:2882
+
+2882: created 3 versioning for alias checks.
+
+2882: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:883
+
+PsociDeterminants.C:2832: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociDeterminants.C:1137
+
+PsociDeterminants.C:1082: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociDeterminants.C:1029
+
+PsociDeterminants.C:976: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:530
+
+530: not vectorized: loop contains function calls or data references that cannot be analyzed
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:527: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:70: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociDeterminants.hpp:58
+
+Analyzing loop at PsociDeterminants.C:477
+
+PsociDeterminants.C:434: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociDeterminants.hpp:58
+
+Analyzing loop at PsociDeterminants.C:930
+
+PsociDeterminants.C:855: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociDeterminants.hpp:58
+
+Analyzing loop at PsociDeterminants.C:584
+
+PsociDeterminants.C:527: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociDeterminants.hpp:58
+
+Analyzing loop at PsociDeterminants.C:379
+
+PsociDeterminants.C:298: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociDeterminants.hpp:58
+
+Analyzing loop at PsociDeterminants.C:686
+
+PsociDeterminants.C:624: note: vectorized 0 loops in function.
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociConfigs.C
+
+Analyzing loop at PsociConfigs.C:603
+
+Analyzing loop at PsociConfigs.C:607
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1129
+
+PsociConfigs.C:591: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:649
+
+Analyzing loop at PsociConfigs.C:660
+
+PsociConfigs.C:623: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:1010
+
+PsociConfigs.C:996: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:1032
+
+PsociConfigs.C:1017: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1076: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociConfigs.C:81: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1076: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1318
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1309: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:989
+
+PsociConfigs.C:981: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:970
+
+PsociConfigs.C:959: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/locale_facets.h:869
+
+Analyzing loop at PsociConfigs.C:443
+
+Analyzing loop at PsociConfigs.C:429
+
+PsociConfigs.C:334: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: not vectorized: vectorization not profitable.
+PsociConfigs.C:767: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:953
+
+PsociConfigs.C:945: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:810
+
+Analyzing loop at PsociConfigs.C:814
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1129
+
+PsociConfigs.C:793: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:872
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1318
+
+Analyzing loop at PsociConfigs.C:875
+
+PsociConfigs.C:838: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1282
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1272: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:268
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/locale_facets.h:869
+
+Analyzing loop at PsociConfigs.C:234
+
+Analyzing loop at PsociConfigs.C:223
+
+Analyzing loop at PsociConfigs.C:208
+
+PsociConfigs.C:126: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: not vectorized: vectorization not profitable.
+PsociConfigs.C:698: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:531
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:1085
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociConfigs.C:1057: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:1325
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociConfigs.C:1295: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociConfigs.C:927
+
+Analyzing loop at PsociConfigs.C:930
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociConfigs.C:894: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:1115
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociConfigs.C:1098: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:570
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociConfigs.C:554: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociConfigs.C:1146
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociConfigs.C:1123: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:531
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:309
+
+Analyzing loop at PsociConfigs.C:1196
+
+
+Vectorizing loop at PsociConfigs.C:1196
+
+1196: created 1 versioning for alias checks.
+
+1196: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:5220
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:247
+
+Analyzing loop at PsociConfigs.C:1179
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algo.h:5220
+
+PsociConfigs.C:1159: note: vectorized 1 loops in function.
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociGAbasis.C
+
+Analyzing loop at PsociGAbasis.C:697
+
+697: not vectorized: loop contains function calls or data references that cannot be analyzed
+PsociGAbasis.C:659: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAbasis.C:1245
+
+Analyzing loop at PsociGAbasis.C:1249
+
+PsociGAbasis.C:1207: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGAbasis.C:549
+
+Analyzing loop at PsociGAbasis.C:551
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAbasis.C:480: note: vectorized 5 loops in function.
+
+Analyzing loop at PsociGAbasis.C:1856
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAbasis.C:1823: note: vectorized 2 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:530
+
+530: not vectorized: more than one data ref in stmt: *__result_85 = MEM[(const struct pair &)__last_87];
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:76
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_uninitialized.h:76
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAbasis.C:1116
+
+Analyzing loop at PsociGAbasis.C:1122
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAbasis.C:1080: note: vectorized 2 loops in function.
+
+Analyzing loop at PsociGAbasis.C:1164
+
+Analyzing loop at PsociGAbasis.C:1170
+
+PsociGAbasis.C:1140: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAbasis.C:1594
+
+PsociGAbasis.C:1588: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociGAbasis.C:1009
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAbasis.C:969: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAbasis.C:1516
+
+PsociGAbasis.C:1473: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAbasis.C:1430
+
+Analyzing loop at PsociGAbasis.C:1435
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAbasis.C:1368: note: vectorized 3 loops in function.
+
+Analyzing loop at PsociGAbasis.C:787
+
+787: not vectorized: loop contains function calls or data references that cannot be analyzed
+PsociGAbasis.C:722: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAbasis.C:294
+
+Analyzing loop at PsociGAbasis.C:1595
+
+Analyzing loop at PsociGAbasis.C:248
+
+PsociGAbasis.C:214: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAbasis.C:446
+
+Analyzing loop at PsociGAbasis.C:448
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAbasis.C:382: note: vectorized 3 loops in function.
+
+Analyzing loop at PsociGAbasis.C:787
+
+787: not vectorized: loop contains function calls or data references that cannot be analyzed
+PsociGAbasis.C:359: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAbasis.C:787
+
+787: not vectorized: loop contains function calls or data references that cannot be analyzed
+PsociGAbasis.C:348: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAbasis.C:1330
+
+Analyzing loop at PsociGAbasis.C:1333
+
+PsociGAbasis.C:1290: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAbasis.C:954
+
+PsociGAbasis.C:919: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAbasis.C:901
+
+PsociGAbasis.C:861: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAbasis.C:1064
+
+PsociGAbasis.C:1041: note: vectorized 0 loops in function.
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociDRArestart.C
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociDRAservices.C
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociGAvectors.C
+
+Analyzing loop at PsociGAvectors.C:718
+
+PsociGAvectors.C:687: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGAvectors.C:524
+
+PsociGAvectors.C:439: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociGAvectors.C:762
+
+Analyzing loop at PsociGAvectors.C:772
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAvectors.C:732: note: vectorized 1 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at PsociGAvectors.C:622
+
+Analyzing loop at PsociGAvectors.C:630
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAvectors.C:539: note: vectorized 1 loops in function.
+
+Analyzing loop at PsociGAvectors.C:281
+
+Analyzing loop at PsociGAvectors.C:289
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAvectors.C:207: note: vectorized 1 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:531
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGAvectors.C:387
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAvectors.C:328: note: vectorized 1 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at PsociGAvectors.C:171
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+PsociGAvectors.C:118: note: vectorized 1 loops in function.
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociTimer.C
+CC  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops    -I/opt/cray/mpt/5.6.0/gni/mpich2-gnu/47/include -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops     PsociVector.C
+
+Analyzing loop at PsociVector.C:248
+
+Analyzing loop at PsociVector.C:259
+
+PsociVector.C:229: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociVector.C:293
+
+Analyzing loop at PsociVector.C:301
+
+PsociVector.C:272: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociVector.C:337
+
+PsociVector.C:321: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociVector.C:513
+
+PsociVector.C:487: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociVector.C:448
+
+PsociVector.C:428: note: vectorized 0 loops in function.
+
+Analyzing loop at PsociVector.C:823
+
+Analyzing loop at PsociVector.C:828
+
+
+Vectorizing loop at PsociVector.C:828
+
+828: LOOP VECTORIZED.
+PsociVector.C:817: note: vectorized 1 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:439: note: vectorized 4 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:102: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:531
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:85
+
+/opt/gcc/4.7.2/snos/include/g++/bits/vector.tcc:316: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/istream:185
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/istream:217
+
+PsociVector.C:345: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:247
+
+PsociVector.C:385: note: vectorized 0 loops in function.
+ftn -c  -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops   -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -c -g -O0  f77sifsIO.f
+CC -g -ffast-math -ftree-vectorizer-verbose=2 -O3 -funroll-loops      -I/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/include -I/opt/acml/5.1.0/gfortran64/include -DMPICH_SKIP_MPICXX  -DSCATFLAT -DREPLICATEDETVALUE -DDIRECT -DSINGLENODECONFIGS -DSUPPLEMENTAL  -DGETANDBRDCST -DNEWACCUMULATEDSCATTER -DINNERSCATTER -DMODIFIED_EXPAND  -DNEWGETAPPEND  -DNEWORTHOALL -DINCREMENTAL  -DNEWORTHO  -DNEWRNOMRS -DDIAGGOP  -DBINARY -DACML  -DCPPstyle -DGATIME -o  driver.PSOCI.splittest.x driver.PSOCI.splittest.C  f77sifsIO.o  PsociTaskManager.o PsociNOpopulations.o PsociProcessMOcoefs.o PsociCIAnalysis.o PsociBlasLapack.o PsociConstructHamiltonian.o PsociGAhamiltonian.o PsociGAsubspace.o PsociHamiltonian.o PsociIntegrals.o PsociGADeterminants.o PsociDeterminants.o PsociConfigs.o PsociGAbasis.o PsociDRArestart.o PsociDRAservices.o PsociGAvectors.o PsociVector.o PsociTimer.o /global/homes/t/tilson/Columbus.5.9.2.gnu.32bit/Columbus/colib.a /global/homes/t/tilson/Columbus.5.9.2.gnu.32bit/Columbus/blaswrapper.a  -L/global/homes/t/tilson/ga-5-0-Mar2012-ANLarmci.int32/ga-5-0/BUILD/lib -lga++ -lga -larmci -lacml -lgfortran -lm -lquadmath 
+In file included from driver.PSOCI.splittest.C:65:0:
+driver.PSOCI.hpp:114:8: warning: extra tokens at end of #endif directive [enabled by default]
+driver.PSOCI.splittest.C: In function 'int main(int, char**)':
+driver.PSOCI.splittest.C:837:24: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+driver.PSOCI.splittest.C:838:25: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+driver.PSOCI.splittest.C:839:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+
+Analyzing loop at driver.PSOCI.splittest.C:108
+
+driver.PSOCI.splittest.C:74: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociGADeterminants.hpp:128: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociIntegrals.hpp:116: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:743
+
+743: LOOP VECTORIZED.
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:292: note: vectorized 1 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_vector.h:402: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1080
+
+/opt/gcc/4.7.2/snos/include/g++/bits/stl_tree.h:1076: note: vectorized 0 loops in function.
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_construct.h:104
+
+PsociConfigs.hpp:45: note: vectorized 0 loops in function.
+
+Analyzing loop at driver.PSOCI.splittest.C:1270
+
+Analyzing loop at driver.PSOCI.splittest.C:1224
+
+Analyzing loop at driver.PSOCI.splittest.C:1085
+
+Analyzing loop at driver.PSOCI.splittest.C:1152
+
+Analyzing loop at driver.PSOCI.splittest.C:1125
+
+Analyzing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+
+Vectorizing loop at /opt/gcc/4.7.2/snos/include/g++/bits/stl_algobase.h:686
+
+686: LOOP VECTORIZED.
+driver.PSOCI.splittest.C:282: note: vectorized 1 loops in function.

@@ -1,0 +1,403 @@
+/**************************************************************************************
+ * Copyright (c) 2010 RENCI.
+ * All rights reserved. This program and the accompanying materials
+ * MAY BE available under the terms of the RENCI Open Source License
+ * UNC at Chapel Hill which accompanies this distribution, and is available at
+ * http://www.renci.org/resources/open-source-software-license
+
+ * New implementation of PSOCI:
+
+ Classes: 
+
+ Description: 
+ 
+ History:
+
+**************************************************************************************/
+/**
+ *   @file driver.GAhamiltonian.C
+ *
+ */
+#include <cstdlib>
+#include <iostream>
+#include <sstream>
+#include <fstream>
+#include <string>
+#include <vector>
+
+#include <cmath>
+// Now start testing for GA
+#include <ga++.h>
+
+#include <mpi.h>
+
+#include <dra.h>
+#define GA_DATA_TYPE C_DBL
+
+//End ga++
+
+#include "PsociTimer.hpp"
+#include "PsociVector.hpp"
+#include "PsociGArestart.hpp"
+#include "PsociDRAservices.hpp"
+#include "PsociDRArestart.hpp"
+#include "PsociGAbasis.hpp"
+#include "PsociConfigs.hpp"
+#include "PsociDeterminants.hpp"
+#include "PsociGADeterminants.hpp"
+#include "PsociHamiltonian.hpp"
+#include "PsociGAhamiltonian.hpp"
+
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//
+//  Start driver program 
+//
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+#define GCOUT if (g_rank==0) cout
+
+//Declarations
+int ProcessFetchIntegrals( string filename );
+
+int main(int argc, char **argv)
+{
+  // Set up global MPI fabric
+  
+  int g_size;
+  int g_rank;
+  
+  // Set up Global Array fabric
+  // heap and stack are per-core quantities - for collective operations
+  // ALlocate in terms of DOUBLES for now
+
+  const long wordSize = sizeof(double);
+//  const long OneGigaByte = 128*1024*1024 * wordSize; // A total of 1 Gig but Generally thinking interms of doubles (words)... 
+//  long maxMemPerCore = OneGigaByte;
+   long maxMemPerCore = 512 * 1024 * 1024 / wordSize;
+
+  unsigned int heap=9000000, stack=9000000;
+  GA::Initialize(argc, argv, heap, stack, GA_DATA_TYPE, 0);
+  GA::setMemoryLimit( maxMemPerCore );
+  g_size = GA::nodes();
+  g_rank = GA::nodeid();
+  if ( GA::usesMA() ) cout << "GA memory is coming from MA " << endl;
+  if ( GA::usesFAPI() ) cout << "GA is using Fortran indexing " << endl;
+
+  GCOUT << "heap and stack are" << heap << " " << stack << endl;
+  GCOUT << "Specified size of " << maxMemPerCore << endl;
+  GCOUT << "GA usesMA ? " << GA::usesMA() << endl;
+  GCOUT << "GA memory limited ? " << GA::memoryLimited() << endl;
+  GCOUT << "GA inquireMemory is " << GA::inquireMemory() << endl;
+  GCOUT << "GA memory avail " << GA::memoryAvailable() << endl;
+  
+  GCOUT << "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" << endl << endl;
+  GCOUT << "Compiled on " << __DATE__ << " at " << __TIME__ << endl;
+  GCOUT << "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" << endl << endl;
+  GCOUT << "Parallel GA Run with " << g_size << " Total processors " << endl;
+  
+  string filename = "configs.test";
+  PsociConfigs configs( filename ); //File is opened/closed at the read
+
+  if ( g_rank == 0 ) {
+    configs.printFilename();
+    if ( configs.readConfigs() != 0 ) {
+       cerr << "Failed to read configs at numfgs =" << endl;
+       GA::Terminate();
+    }
+    configs.printParams();
+    configs.printConfigurations();
+  }
+  configs.brdcstConfigs( 0 ); //now replicated to all nodes
+
+// Used as a simple test 
+
+  if ( g_rank == 0 ) {
+  vector<pair<int,string> > word;
+  int maxspatials = configs.numTotalSpatials();
+  cout << "Num total spatials is " << maxspatials << endl;
+  int newconfs = configs.fetchConfig( 1, maxspatials, word );
+  cout << "new sym and string are " << newconfs << endl;
+  }
+  GA::sync();
+
+
+// Do determinant construction in parallel
+// For now simply decompose the list into contiguous blocks
+
+/*
+  int mylo;
+  int myhi;
+  int numb = ( maxspatials + 1 ) / g_size
+
+  mylo = (g_rank * numb ) + 1;
+  myhi = min( (g_rank+1) * numb, maxspatials );
+
+  vector<pair<int,string> > word;
+  int maxspatials = configs.numTotalSpatials();
+  cout << "Num total spatials is " << maxspatials << endl;
+  int newconfs = configs.fetchConfig( 1, maxspatials, word );
+  cout << "new sym and string are " << newconfs << endl;
+  }
+*/
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+//Construct determinants
+
+  PsociDeterminants deters( &configs );
+  deters.printParams();
+  int maxspatials = deters.maxSpatials(); 
+
+// Process the Configs in chunks per processor
+  deters.printFinalDeterminants(); // just a switch for subequent print calls
+
+// Note how we can carve up determinant space by simply doing fetch on a subset. Hmm, 
+// can we do this iteratively ? Yes so we can do an adaptive prtocessing of the space.
+// Also config .index is unique for each as that s generated by the PsociConfigs method on read.
+
+
+//For testing have One node grab and creatdets for all confs.
+
+  pair<int,double> time;
+  int mylo;
+  int myhi;
+  int numb = ( maxspatials / g_size ) + 1;
+  
+// Add checling for TOO many procs for a small test 
+  mylo = (g_rank * numb ) + 1;
+  myhi = min( (g_rank + 1) * numb, maxspatials );
+
+  cout << "mylo myhi max are " << mylo << " " << myhi << " " << maxspatials << endl;
+  deters.fetchConfigs( mylo, myhi, time );
+
+  cout << "I am " << time.first << " Time to process deters is " << time.second << endl;
+
+  deters.assembleGlobalMaxDetSef();
+  cout << "local max ndeti per spatial is " << deters.fetchLocalMaxDetPerSpatial() << endl;
+  cout << "global max ndeti per spatial is " << deters.fetchGlobalMaxDetPerSpatial() << endl;
+  cout << "Print spin parity is " << deters.fetchSpinParity() << endl;
+
+  deters.assembleGlobalNumSpatials();
+  cout << "num spatials readin by PsociConfigs method is " << deters.maxSpatials() << endl;
+  cout << "Max num actually processed globally are " << deters.fetchGlobalMaxSpatials() << endl;
+  cout << "Max ndet processed globally are " << deters.fetchGlobalMaxDet() << endl;
+  cout << "Max nsef processed globally are " << deters.fetchGlobalMaxSef() << endl;
+  cout << "Number of LOCAL spatials is " << deters.localSpatials() << endl;
+  cout << "Max ndet per spatial processed globally are " << deters.fetchGlobalMaxDetPerSpatial() << endl;
+  cout << "Max nsef per spatial processed globally are " << deters.fetchGlobalMaxSefPerSpatial() << endl;
+
+  deters.assembleGlobalJobParameters(); // Reqrd: more assembly 
+//This one also gets caled in deters_detr.createDistributedDeterminants
+ 
+  if ( maxspatials < 1000 ) {
+  for(int i=0; i< maxspatials; ++i ) {
+     deters.printSpatialsData( myhi-mylo ); // NOTE: the '1' is a relative index ( per core )
+  }
+  }
+
+  int testconf=deters.fetchGlobalMaxSpatials();
+  int maxsef = deters.fetchGlobalMaxSef();
+  int ksym = deters.fetchGlobalSymmetry();
+  cout << " Me is " << GA::nodeid() << " FETCHED global sym is " << ksym << endl;
+  cout << " Me is " << GA::nodeid() << " FETCHED maxsef is " << maxsef << endl;
+  cout << " Me is " << GA::nodeid() << " FETCHED testconf " << testconf << endl;
+  cout << endl << endl;
+
+// Start processing the movement of determinant data to GA. Once there, we can teardown all local 
+// determinant data structures.
+
+  cout << "Build distributed GA_DET space " << endl;
+  
+  GA::GlobalArray * g_det; // declare global det data
+  GA::GlobalArray * g_det_num;
+  GA::GlobalArray * g_nsef;
+
+  PsociGADeterminants deters_det( g_det, g_det_num, g_nsef ); 
+  deters_det.createDistributedDeterminants( &deters ); // GA created and all local dets are pushed to GA
+
+//Basic output for tests
+  deters_det.printDistribution();
+  deters_det.assembleDimensions();
+  deters_det.printDimensions();
+
+
+  cout << "Can we access the MPI layer directly ? " << endl;
+  int rank;
+  MPI_Comm_rank( MPI_COMM_WORLD, &rank );
+  cout << " MY RANK is " << rank << endl;
+  
+
+  pair<int,double> info;
+
+  cout << "Can we still work with this AND tear down dets " << endl;
+
+  vector<int> l_nsef;
+  deters_det.assembleAndBrdcstNsef( l_nsef ); //don't need l_nsef anymore
+
+  int nbf = deters.fetchNumBasisFunctions();
+  int nelec = deters.fetchNumElectrons();
+
+//  cout << "Must do before tear down is " << deters.fetchNumElectrons() << endl;
+//  cout << "NBF is" << deters.fetchNumBasisFunctions() << endl;
+
+  deters.tearDownDeterminants();
+ 
+/* Must open up integrals */
+/* Collective calls but only ROOT_READER does anything
+  End with a brdcst to all 
+*/
+
+
+
+   
+//   string filername="./INTEGRALS/RUO32BIT/moints";
+     string filername="/home/jtilson/RuO+2-NewBasis-SDCI-PSOCIQA/moints";
+//   string filername="./INTEGRALS/RuOSCI-B1-2.75au/moints";
+
+   PsociIntegrals mos;
+   int statints = ProcessFetchIntegrals( filername, mos );
+
+//Need to process many groups now for better debugging.....
+// Do fetch[0] against all others
+
+  GA::GlobalArray * g_cimat; // declare global det data
+  GA::GlobalArray * g_icicol;
+  GA::GlobalArray * g_number;
+  GA::GlobalArray * g_diag_sef;
+
+  //cout << "nbf is " << nbf << endl;
+  
+//Collective call
+/* At this point alll determinants should have been generated AND pushed into GAdeterminant space.
+   No subsequent locality is required
+*/
+
+  const int maxsparse=2000;
+  cout << "Setting GAH sparsity to " << maxsparse << endl;
+
+  PsociGAhamiltonian hamilton(maxsparse, maxsef, g_cimat, g_icicol, g_number, g_diag_sef, &deters_det, &mos );
+
+  int nsize = hamilton.computeNsefEntryPoints( l_nsef );
+  //hamilton.printNsefEntryPoints();
+
+/*
+  cout << "nsize is " << nsize << endl;
+  if ( GA::nodeid() == 0 ) {
+  cout << "GLobal l_nsef ENTRY POINTS " << l_nsef.size() << endl;
+  for(int i=0; i<deters.fetchGlobalMaxSpatials(); ++i ) {
+     cout << GA::nodeid() << " " << l_nsef[i];
+  }
+  cout << endl;
+  }
+*/
+
+  hamilton.printKsym();
+  hamilton.printPerSpatialValues();
+  hamilton.hamiltonianDistribution();
+
+//For not all nodes redundantly compute H
+
+  pair<int,double> Hinfo;
+//works  long numH = hamilton.constructGlobalHamiltonian(Hinfo);
+   int fake;
+   long numH = hamilton.constructGlobalHamiltonian( fake, Hinfo );
+  //long numH = hamilton.constructGlobalHamiltonianSparseStats();
+  cout << "Total number of elements above threshold  " << numH << endl;
+  cout << "Timing: Me is " << Hinfo.first << " time is " << Hinfo.second << endl;
+
+  //hamilton.printDiags();
+
+// Open up some 1D pretend arrays
+
+  
+  int vdim=1;
+  int dims[2],chunk[2];
+  dims[0] = maxsef;
+  chunk[0] = -1; // Need to do performance tuning on this
+
+  GA::GlobalArray * g_v;
+  GA::GlobalArray * g_Hv;
+
+  char * vector_title = "vector";
+  g_v = GA::createGA( C_DBL, vdim, dims, (char *) vector_title, chunk);
+
+  char * vector_title2 = "H_vector";
+  g_Hv = GA::createGA( C_DBL, vdim, dims, (char *) vector_title2, chunk);
+
+// Need to populate the testVector
+
+  int lo[2], hi[2];
+
+  if ( g_rank == 0 ) {
+  vector<double> testData( maxsef,0 );
+  for(int i=0; i< maxsef; ++i ) {
+        testData[i]=i;
+  }
+
+  lo[0]=0;
+  lo[1]=0;
+  hi[0]=maxsef-1;
+  hi[1]=0;
+  int n=1;
+  cout << "XXXXX Put vector " << endl;
+    g_v->put(lo, hi, &testData[0], &n);
+ }
+ GA::sync();
+
+
+//  hamilton.matrixVectorProductsIncore( g_v, g_Hv );
+  //hamilton.dumpCimat();
+
+  cout << " I am " << GA::nodeid() << " at the final SYNC " << endl;
+  GA::sync();
+  cout << "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX finished XXXXXXXXXXXXXXXXXXX " << endl;
+  //GA::Terminate();
+  
+}
+
+
+// Collective call
+   int ProcessFetchIntegrals( string filename, PsociIntegrals & mos )
+{
+   int status = 1;
+
+   cout << GA::nodeid() << " Fetching integrals " << endl;
+
+   Fint l_unit = 2;
+
+   PsociIntegrals mos( 0, l_unit, filename );
+   mos.printFilename();
+   Fint unit = mos.fetchUnit();
+   mos.OpenFile();
+
+   if ( mos.sifrh1() != 0 ) {
+     cerr << "sifrh1 not zero value aborting: " << endl;
+     cerr << "probably incompatible 32bit/64bit builds " << endl;
+     GA::Terminate();
+   }
+   if ( mos.sifrh2() != 0 ) {
+     cerr << "sifrh2 not zero value aborting: " << endl;
+     cerr << "probably incompatible 32bit/64bit builds " << endl;
+     GA::Terminate();
+   }
+
+   mos.brdcstParams();
+
+   mos.printSifrh1();
+   mos.printSifrh2();
+   
+   status = mos.fetchOneElectronInts();
+   status = mos.brdcstOneElectronInts();
+
+   mos.set1ePrint();
+   mos.printOneElectronInts();
+
+   mos.fetchTwoElectronInts();
+   status = mos.brdcstTwoElectronInts();
+   //mos.set2ePrint();
+   mos.printTwoElectronInts();
+   
+   return( status );
+}
+
