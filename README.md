@@ -9,7 +9,7 @@ and interchangable.
 
 The PSOCI model is a relativistic, conventional CI, ab initio model, that builds orbital-based determinants 
 from double-group symmetry adapted basis orbitals. In typical usage, a Full-CI in the valence space is specified followed by 1+2 excitations.
-The single excitations provide a reasonable energy values for spin-orbit fine splittings.
+The single excitations provide reasonable energy values for spin-orbit fine splittings.
 
 The code is useful in detailed theoretical analysis of complex bonding situations such as encountered 
 in Heavy Transition metal, Lanthanide or Actinide containing molecules.
