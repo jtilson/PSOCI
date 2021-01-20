@@ -7,8 +7,9 @@ the application of PSOCI to only the largest of computer systems. PSOCI has repo
 to the Columbus Suite of computational codes in that many iof the same shared libraries and data structures are used
 and interchangable.
 
-The PSOCI model is a relativistic, conventional CI, ab initio model, that buils orbital-based determinants 
-from double-group symetry adapted basis orbitals, and performed 1+2 excitations from that space. 
+The PSOCI model is a relativistic, conventional CI, ab initio model, that builds orbital-based determinants 
+from double-group symmetry adapted basis orbitals. In typical usage, a Full-CI in the valence space is specified followed by 1+2 excitations.
+The single excitations provide a reasonable energy values for spin-orbit fine splittings.
 
 The code is useful in detailed theoretical analysis of complex bonding situations such as encountered 
 in Heavy Transition metal, Lanthanide or Actinide containing molecules.
