@@ -1,5 +1,5 @@
 # PSOCI
-Parallel Spin Orbit configuration Interaction (PSOCI) program. 
+Parallel Spin Orbit Configuration Interaction (PSOCI) program. 
 PSOCI is a computationally intensive method that uses MPI and Global Arrays to manage 
 largescale (parallel) data distribution and concurrancy. The enormous complexity limits 
 the application of PSOCI to only the largest of computer systems. PSOCI has reportedly scaled well
